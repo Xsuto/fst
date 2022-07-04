@@ -1,5 +1,5 @@
 <template>
-    <TransitionGroup tag="ul" name="list" :class="{ show: shouldShow }" ref="chat">
+    <TransitionGroup id="list" tag="ul" name="list" :class="{ show: shouldShow }" ref="chat">
       <Message v-for="message in messages" :key="message.id" :message="message" />
     </TransitionGroup>
 </template>
@@ -8,6 +8,7 @@
 import tmi from 'tmi.js';
 import { v4 } from "uuid"
 import Message from './Message.vue';
+import {$computed} from "vue/macros";
 interface Props {
   channel: string
 }
@@ -37,10 +38,18 @@ interface Emote {
 const props = defineProps<Props>()
 const router = useRouter();
 const {data: emotes} = $( await useFetch<Emote[]>("https://api.7tv.app/v2/users/h2p_gucio/emotes"))
-const {data: globalEmotes} = $( await useFetch<Emote[]>("https://api.7tv.app/v2/emotes/global"))
 // https://api.7tv.app/v2/emotes/global
+const {data: globalEmotes} = $( await useFetch<Emote[]>("https://api.7tv.app/v2/emotes/global"))
+// "https://api.ivr.fi/twitch/resolve/" + channel
+const {data: twitchUser} = $( await useFetch<string>(`https://api.ivr.fi/twitch/resolve/${props.channel}`))
+// "https://api.betterttv.net/3/cached/users/twitch/" + twitchID
+const {data} = $( await useFetch<object>("https://api.betterttv.net/3/cached/users/twitch/" + twitchUser.id))
+const bttvEmotes = $computed(() => data.sharedEmotes)
 let messages = $ref([]);
-let chat = $ref(null);
+
+// FIXME: BIG HACK transition-group collides with ref and we cannot get access to ul so, We get the ul by id
+let chat = $ref(null)
+
 let shouldShow = $ref(true);
 const client = new tmi.Client({
   connection: {
@@ -52,7 +61,7 @@ const client = new tmi.Client({
 client.connect();
 function updateScroll() {
   try {
-    chat.scrollTop = chat.scrollHeight;
+    chat.$el.scrollTop = chat.$el.scrollHeight;
   } catch (err) {
     console.log(err);
   }
@@ -65,6 +74,7 @@ function handleKeyDown(e) {
 }
 
 client.on('message', (_, tags, message) => {
+  console.log(data)
   const s = message.split(" ").map(it => {
       for (const emote of emotes) {
         if (emote.name == it)
@@ -73,6 +83,10 @@ client.on('message', (_, tags, message) => {
     for (const emote of globalEmotes) {
       if (emote.name == it)
         return emote.urls[0][1]
+    }
+    for (const emote of bttvEmotes) {
+      if (emote.code == it)
+        return `https://cdn.betterttv.net/emote/${emote.id}/1x`
     }
     return it
   })
@@ -123,7 +137,7 @@ ul {
 
 .show {
   opacity: 1;
-  width: 25%;
+  width: clamp(20%,23vw,25%);
   height: 100%;
   transition: opacity 600ms, width 0s 0s, height 0s 0s;
 }

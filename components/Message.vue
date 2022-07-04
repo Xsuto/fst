@@ -20,12 +20,13 @@ const messageContent = $computed(() => props.message.text.split(" "))
 
 <style lang="scss" scoped>
 li {
+
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
   text-decoration: none;
   word-wrap: break-word;
   margin-bottom: .2rem;
-  font-size: 1.4rem;
+  font-size: clamp(0.8rem,1vw,1.5rem);
   filter: brightness(1.3);
   display: flex;
   height: auto;
