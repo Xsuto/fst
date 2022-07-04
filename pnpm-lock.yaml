@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@tauri-apps/cli': ^1.0.2
+  '@types/tmi.js': ^1.8.1
   '@types/uuid': ^8.3.4
   nuxt: 3.0.0-rc.4
   sass: ^1.53.0
@@ -17,6 +18,7 @@ dependencies:
 
 devDependencies:
   '@tauri-apps/cli': 1.0.2
+  '@types/tmi.js': 1.8.1
   '@types/uuid': 8.3.4
   nuxt: 3.0.0-rc.4_sass@1.53.0
 
@@ -869,6 +871,10 @@ packages:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
       '@types/node': 18.0.1
+    dev: true
+
+  /@types/tmi.js/1.8.1:
+    resolution: {integrity: sha512-rnUKPYZfrNsxXbmNOK7NuHIF6VPRPiCQnrZQwyWnl6UaoOAc0ZmQ5VRpUq4p1JwqBA2+4qDPn9EXVqzzvNUzBA==}
     dev: true
 
   /@types/tough-cookie/4.0.2:

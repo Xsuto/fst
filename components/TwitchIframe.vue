@@ -3,10 +3,10 @@
 </template>
 
 <script setup lang="ts">
-interface interfaceProps {
+interface Props {
   link: string
 }
-const props = defineProps<interfaceProps>()
+const props = defineProps<Props>()
 let width = $ref(0);
 let height = $ref(0);
 function handleResize() {

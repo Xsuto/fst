@@ -15,7 +15,7 @@ const link = computed(() => `https://player.twitch.tv/?channel=${channel.value}&
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
 .dashboard {
   position: relative;
   width: 100vw;

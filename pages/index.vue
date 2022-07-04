@@ -1,15 +1,22 @@
 <template>
-<div>
-<label for="channel">Channel name</label>
-<input type="channel" name="channel" v-model="channel" />
-<button @click="handleClick">Go</button>
-<ul>
-  <li v-for="savedChannel in savedChannels" :key="savedChannel.id">
-    <NuxtLink :to="{ path: `/dashboard/${savedChannel.channel}` }">{{
-        savedChannel.channel
-      }}</NuxtLink>
-  </li>
-</ul>
+<div class="container">
+  <div class="content">
+    <label for="channel">Channel name</label>
+    <main>
+      <input type="channel" placeholder="Channel name" name="channel" required v-model="channel" />
+      <button @click="handleClick">Watch!</button>
+    </main>
+    <div class="links">
+      <ul class="resizable-content">
+        <h1>Previously Watched</h1>
+        <li v-for="savedChannel in savedChannels" :key="savedChannel.id">
+          <NuxtLink :to="{ path: `/dashboard/${savedChannel.channel}` }">{{
+              savedChannel.channel
+            }}</NuxtLink>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 </template>
 
@@ -19,7 +26,6 @@ import {$computed} from "vue/macros";
 let channel = $ref("")
 let savedChannels = $computed(() => JSON.parse(localStorage.getItem('channels')))
 const router = useRouter()
-
 function handleClick() {
   if (!channel) return;
   const tempSavedChannels = JSON.parse(localStorage.getItem('channels')) || [];
@@ -32,7 +38,53 @@ function handleClick() {
 </script>
 
 <style scoped lang="scss">
-div {
+*  {
+  color: white;
+}
+label {
+  font-size: 5rem
+}
+main {
+  width: 100%;
+  display: flex;
+  gap: 5%
+}
+input {
+  width: 60%;
+  height: 2rem;
+  background-color: #0f172a;
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+}
+button {
+  width: 30%;
+  background-color: #374151;
+  border: none;
+  border-radius: 1rem;
+  font-size: 2rem;
+  transition: 500ms;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #475569;
+  }
+}
+.links {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.content {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.container {
+  width: 100%;
+  background-color: #1e293b;
   text-align: left;
   min-height: 100vh;
   display: flex;
@@ -40,6 +92,15 @@ div {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  font-size: 2rem;
 }
 </style>
 
