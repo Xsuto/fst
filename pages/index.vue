@@ -1,41 +1,46 @@
-<template>
-<div class="container">
-  <div class="content">
-    <label for="channel">Channel name</label>
-    <main>
-      <input type="channel" placeholder="Channel name" name="channel" required v-model="channel" />
-      <button @click="handleClick">Watch!</button>
-    </main>
-    <div class="links">
-      <ul class="resizable-content">
-        <h1>Previously Watched</h1>
-        <li v-for="savedChannel in savedChannels" :key="savedChannel.id">
-          <NuxtLink :to="{ path: `/dashboard/${savedChannel.channel}` }">{{
-              savedChannel.channel
-            }}</NuxtLink>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-</template>
-
 <script setup lang="ts">
-import { v4 as uuid } from 'uuid';
-import {$computed} from "vue/macros";
-let channel = $ref("")
-let savedChannels = $computed(() => JSON.parse(localStorage.getItem('channels')))
+import { v4 as uuid } from 'uuid'
+import { $computed } from 'vue/macros'
+const channel = $ref('')
+const savedChannels = $computed(() => JSON.parse(localStorage.getItem('channels')))
 const router = useRouter()
 function handleClick() {
-  if (!channel) return;
-  const tempSavedChannels = JSON.parse(localStorage.getItem('channels')) || [];
+  if (!channel)
+    return
+  const tempSavedChannels = JSON.parse(localStorage.getItem('channels')) || []
   localStorage.setItem(
-      'channels',
-      JSON.stringify([...tempSavedChannels, { channel: channel, id: uuid() }]),
-  );
-  router.push({ path: `/dashboard/${channel}`})
+    'channels',
+    JSON.stringify([...tempSavedChannels, { channel, id: uuid() }]),
+  )
+  router.push({ path: `/dashboard/${channel}` })
 }
 </script>
+
+<template>
+  <div class="container">
+    <div class="content">
+      <label for="channel">Channel name</label>
+      <main>
+        <input v-model="channel" placeholder="Channel name" name="channel" required>
+        <button @click="handleClick">
+          Watch!
+        </button>
+      </main>
+      <div class="links">
+        <ul class="resizable-content">
+          <h1>Previously Watched</h1>
+          <li v-for="savedChannel in savedChannels" :key="savedChannel.id">
+            <NuxtLink :to="{ path: `/dashboard/${savedChannel.channel}` }">
+              {{
+                savedChannel.channel
+              }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style scoped lang="scss">
 *  {
