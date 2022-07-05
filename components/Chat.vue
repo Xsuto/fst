@@ -1,34 +1,15 @@
 <script setup lang="ts">
 import tmi from 'tmi.js'
 import { v4 } from 'uuid'
-import { $computed } from 'vue/macros'
 import Message from './Message.vue'
 interface Props {
   channel: string
 }
-interface Emote7tv {
-  name: string
-  width: number[]
-  height: number[]
-  urls: string[]
-}
-interface EmoteBttv {
-  code: string
-  id: string
-}
-interface BttvResponse {
-  sharedEmotes: EmoteBttv[]
-}
+
 const props = defineProps<Props>()
 const router = useRouter()
-const { data: emotes } = $(await useFetch<Emote7tv[]>('https://api.7tv.app/v2/users/h2p_gucio/emotes'))
-// https://api.7tv.app/v2/emotes/global
-const { data: globalEmotes } = $(await useFetch<Emote7tv[]>('https://api.7tv.app/v2/emotes/global'))
-// "https://api.ivr.fi/twitch/resolve/" + channel
-const { data: twitchUser } = $(await useFetch<{ id: string }>(`https://api.ivr.fi/twitch/resolve/${props.channel}`))
-// "https://api.betterttv.net/3/cached/users/twitch/" + twitchID
-const { data } = $(await useFetch<BttvResponse>(`https://api.betterttv.net/3/cached/users/twitch/${twitchUser.id}`))
-const bttvEmotes = $computed(() => data.sharedEmotes)
+const emotes = $(await getEmotes(props.channel))
+
 const messages = $ref([])
 
 const chat = $ref(null)
@@ -60,15 +41,7 @@ client.on('message', (_, tags, message) => {
   const s = message.split(' ').map((it) => {
     for (const emote of emotes) {
       if (emote.name === it)
-        return emote.urls[0][1]
-    }
-    for (const emote of globalEmotes) {
-      if (emote.name === it)
-        return emote.urls[0][1]
-    }
-    for (const emote of bttvEmotes) {
-      if (emote.code === it)
-        return `https://cdn.betterttv.net/emote/${emote.id}/1x`
+        return emote.url
     }
     return it
   })
@@ -126,7 +99,6 @@ ul {
   height: 100%;
   transition: opacity 600ms, width 0s 0s, height 0s 0s;
 }
-.list-move,
 .list-enter-active,
 .list-leave-active {
   transition: all 0.5s ease;

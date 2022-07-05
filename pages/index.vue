@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { v4 as uuid } from 'uuid'
-import { $computed } from 'vue/macros'
+import IconDelete from '~icons/fluent/delete-16-regular'
 const channel = $ref('')
-const savedChannels = $computed(() => JSON.parse(localStorage.getItem('channels')))
+let savedChannels = $ref((() => JSON.parse(localStorage.getItem('channels')))())
 const router = useRouter()
 function handleClick() {
   if (!channel)
@@ -13,6 +13,10 @@ function handleClick() {
     JSON.stringify([...tempSavedChannels, { channel, id: uuid() }]),
   )
   router.push({ path: `/dashboard/${channel}` })
+}
+function handleDelete(id: string) {
+  savedChannels = savedChannels.filter(it => it.id !== id)
+  localStorage.setItem('channels', JSON.stringify(savedChannels))
 }
 </script>
 
@@ -27,14 +31,15 @@ function handleClick() {
         </button>
       </main>
       <div class="links">
+        <h1>Previously Watched</h1>
         <ul class="resizable-content">
-          <h1>Previously Watched</h1>
           <li v-for="savedChannel in savedChannels" :key="savedChannel.id">
             <NuxtLink :to="{ path: `/dashboard/${savedChannel.channel}` }">
               {{
                 savedChannel.channel
               }}
             </NuxtLink>
+            <IconDelete class="deleteIcon" @click="handleDelete(savedChannel.id)" />
           </li>
         </ul>
       </div>
@@ -87,6 +92,13 @@ button {
   flex-direction: column;
   margin: 0 auto;
 }
+.deleteIcon {
+  transition: 200ms;
+  cursor: pointer;
+  &:hover {
+    color: #cbd5e1;
+  }
+}
 .container {
   width: 100%;
   background-color: #1e293b;
@@ -106,6 +118,18 @@ ul {
 }
 li {
   font-size: 2rem;
+  margin:  1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+a {
+  text-decoration-color: #e2e2e2;
+  cursor: pointer;
+  transition: 200ms;
+  &:hover {
+    filter: brightness(1.6);
+  }
 }
 </style>
 
