@@ -13,7 +13,7 @@ interface BttvResponse {
 }
 interface FfzResponse {
   sets: {
-    3: {
+    [it: number]: {
       emoticons: {
         urls: string[]
       }
@@ -27,7 +27,7 @@ interface Emote {
 export async function getEmotes(channel: string) {
   const emotes = $ref<Emote[]>([])
   const { data: twitchUser } = $(await useFetch<{ id: string }>(`https://api.ivr.fi/twitch/resolve/${channel}`))
-  const Emotes7tvPromise = useFetch<Emote7tv[]>('https://api.7tv.app/v2/users/h2p_gucio/emotes')
+  const Emotes7tvPromise = useFetch<Emote7tv[]>(`https://api.7tv.app/v2/users/${channel}/emotes`, { default: () => [] })
   const EmotesGlobal7tvPromise = useFetch<Emote7tv[]>('https://api.7tv.app/v2/emotes/global')
   const EmotesBttvPromise = useFetch<BttvResponse>(`https://api.betterttv.net/3/cached/users/twitch/${twitchUser.id}`)
   const EmotesFfzPromise = useFetch<FfzResponse>('https://api.frankerfacez.com/v1/set/global')
