@@ -1,32 +1,30 @@
 <script setup lang="ts">
-import tmi from 'tmi.js'
-import { v4 } from 'uuid'
-import Message from './Message.vue'
 interface Props {
   channel: string
 }
 
 const props = defineProps<Props>()
 const router = useRouter()
-const emotes = $(await getEmotes(props.channel))
-
-const messages = $ref([])
 
 const chat = $ref(null)
+const filter = $ref('')
+const isTyping = $ref(false)
 
 let shouldShow = $ref(true)
-const client = new tmi.Client({
-  connection: {
-    secure: true,
-    reconnect: true,
-  },
-  channels: [`${props.channel}`],
-})
-client.connect()
+let showSearchBar = $ref(false)
+let autoscroll = $ref(true)
 function updateScroll() {
-  chat.$el.scrollTop = chat.$el.scrollHeight
+  // chat.$el.scrollTop = chat.$el.scrollHeight
+  chat.scrollTop = chat.scrollHeight
 }
+const { messages, client } = $(await getMessages({
+  channel: props.channel,
+  filter: $$(filter),
+  scroll: { autoscroll: $$(autoscroll), updateScroll },
+}))
 function handleKeyDown(e) {
+  if (isTyping)
+    return
   if (e.key === 'c')
     shouldShow = !shouldShow
   if (e.key === 'q')
@@ -35,37 +33,27 @@ function handleKeyDown(e) {
     client.disconnect()
   if (e.key === 'r')
     client.connect()
+  if (e.key === 'f')
+    showSearchBar = !showSearchBar
+  if (e.key === 's')
+    autoscroll = !autoscroll
 }
 
-client.on('message', (_, tags, message) => {
-  const s = message.split(' ').map((it) => {
-    for (const emote of emotes) {
-      if (emote.name === it)
-        return emote.url
-    }
-    return it
-  })
-  messages.push({
-    text: s.join(' '),
-    id: v4(),
-    tags,
-  })
-  if (messages.length > 200)
-    messages.shift()
-
-  updateScroll()
-})
 window.addEventListener('keydown', handleKeyDown)
 onUnmounted(() => {
-  client.disconnect()
   window.removeEventListener('keydown', handleKeyDown)
 })
 </script>
 
 <template>
-  <TransitionGroup ref="chat" tag="ul" name="list" :class="{ show: shouldShow }">
+  <SearchBar v-if="showSearchBar" v-model:isTyping="isTyping" v-model:filter="filter" />
+  <!--  Huge lag because of Animation over 200 items -->
+  <!--  <TransitionGroup ref="chat" tag="ul" name="list" :class="{ show: shouldShow, accountForSearchBar: shouldShow && showSearchBar }"> -->
+  <!--    <Message v-for="message in messages" :key="message.id" :message="message" /> -->
+  <!--  </TransitionGroup> -->
+  <ul ref="chat" :class="{ show: shouldShow, accountForSearchBar: shouldShow && showSearchBar }">
     <Message v-for="message in messages" :key="message.id" :message="message" />
-  </TransitionGroup>
+  </ul>
 </template>
 
 <style lang="scss" scoped>
@@ -77,7 +65,7 @@ ul {
   right: 0;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1;
   margin: 0;
   padding: 0 1rem 6rem 0.5rem;
   list-style-type: none;
@@ -98,6 +86,10 @@ ul {
   width: clamp(20%,23vw,25%);
   height: 100%;
   transition: opacity 600ms, width 0s 0s, height 0s 0s;
+}
+.accountForSearchBar {
+  top: 10vh;
+  height: 90%;
 }
 .list-enter-active,
 .list-leave-active {
