@@ -75,7 +75,7 @@ ul {
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   margin: 0;
-  padding: 0 1rem 6rem 0.5rem;
+  padding: 0.5rem 1rem 6rem 0.5rem;
   list-style-type: none;
   overflow-y: scroll;
   opacity: 0;

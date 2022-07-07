@@ -31,7 +31,7 @@ li {
   text-decoration: none;
   word-wrap: break-word;
   margin-bottom: .2rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   filter: brightness(1.3);
   display: flex;
   height: auto;
