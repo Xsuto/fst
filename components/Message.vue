@@ -25,7 +25,6 @@ const messageContent = $computed(() => props.message.text.split(' '))
 
 <style lang="scss" scoped>
 li {
-
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
   text-decoration: none;

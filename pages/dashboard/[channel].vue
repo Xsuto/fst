@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
 const route = useRoute()
 const dashboard = ref(null)
 const href = computed(() => window.location.host.split(':')[0])

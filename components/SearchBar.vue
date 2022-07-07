@@ -5,6 +5,7 @@ interface Props {
 }
 const props = defineProps<Props>()
 const emit = defineEmits(['update:isTyping', 'update:filter'])
+const inputRef = $ref(null)
 let idTimeout = $ref(0)
 const DEBOUNCE_FOR = 300
 function handleInput(event) {
@@ -12,12 +13,21 @@ function handleInput(event) {
   clearTimeout(idTimeout)
   idTimeout = setTimeout(() => emit('update:filter', event.target.value), DEBOUNCE_FOR)
 }
+onMounted(() => {
+  setTimeout(() => {
+    inputRef.focus()
+  }, 100)
+})
+onUnmounted(() => {
+  emit('update:filter', '')
+})
 </script>
 
 <template>
   <div>
     <label for="search">Search for: </label>
     <input
+      ref="inputRef"
       placeholder="Filter by"
       :value="filter"
       name="search"

@@ -46,6 +46,7 @@ onUnmounted(() => {
 </script>
 
 <template>
+
   <SearchBar v-if="showSearchBar" v-model:isTyping="isTyping" v-model:filter="filter" />
   <!--  Huge lag because of Animation over 200 items -->
   <!--  <TransitionGroup ref="chat" tag="ul" name="list" :class="{ show: shouldShow, accountForSearchBar: shouldShow && showSearchBar }"> -->
