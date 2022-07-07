@@ -38,7 +38,6 @@ onUnmounted(() => {
 
 <style scoped>
 div {
-  background-color: rgba(0, 0, 0, 0.7);
   position: relative;
   height: 10%;
   display: flex;
