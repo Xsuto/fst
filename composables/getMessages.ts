@@ -1,14 +1,8 @@
 import type { Ref } from '@vue/reactivity'
 import tmi from 'tmi.js'
 import { v4 as uuid } from 'uuid'
-
-const MAX_MESSAGE_HISTORY = 200
-
-interface Message {
-  id: string
-  text: string
-  tags: tmi.Userstate
-}
+import type Message from '@/interfaces/Message'
+const MAX_MESSAGE_HISTORY = 1000
 
 export default async function (
   props: {
@@ -26,19 +20,21 @@ export default async function (
     channels: [channel],
   })
   const messages = $ref<Message[]>([])
-  const filteredMessages = $computed(() => messages.filter(it => it.text.includes(filterDebounced)))
+  const filteredMessages = $computed(() => messages.filter(it =>
+    it.words.map(it => it.content).join(' ').toLowerCase().includes(filterDebounced.toLowerCase(),
+    )))
   await client.connect()
   const emotes = $(await getEmotes(channel))
   client.on('message', (_, tags, message) => {
-    const s = message.split(' ').map((it) => {
+    const data = message.split(' ').map((it) => {
       for (const emote of emotes) {
         if (emote.name === it)
-          return emote.url
+          return { content: emote.url, isEmote: true }
       }
-      return it
+      return { content: it, isEmote: false }
     })
     messages.push({
-      text: s.join(' '),
+      words: data,
       id: uuid(),
       tags,
     })
