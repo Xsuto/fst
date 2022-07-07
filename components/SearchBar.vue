@@ -6,12 +6,10 @@ interface Props {
 const props = defineProps<Props>()
 const emit = defineEmits(['update:isTyping', 'update:filter'])
 const inputRef = $ref(null)
-let idTimeout = $ref(0)
+const idTimeout = $ref(0)
 const DEBOUNCE_FOR = 300
 function handleInput(event) {
-  // Small debounce so we aren't updating messages array on every keystroke
-  clearTimeout(idTimeout)
-  idTimeout = setTimeout(() => emit('update:filter', event.target.value), DEBOUNCE_FOR)
+  emit('update:filter', event.target.value)
 }
 onMounted(() => {
   setTimeout(() => {
@@ -33,7 +31,7 @@ onUnmounted(() => {
       name="search"
       @focusin="$emit('update:isTyping', true)"
       @focusout="$emit('update:isTyping', false)"
-      @input="handleInput"
+      @input="$emit('update:filter', $event.target.value)"
     >
   </div>
 </template>
