@@ -23,10 +23,16 @@ const { messages, client } = $(await getMessages({
   scroll: { autoscroll: $$(autoscroll), updateScroll },
 }))
 function handleKeyDown(e) {
+  if (e.keyCode === 27)
+    showSearchBar = false
+
   if (isTyping)
     return
-  if (e.key === 'c')
+
+  if (e.key === 'c') {
+    showSearchBar = false
     shouldShow = !shouldShow
+  }
   if (e.key === 'q')
     router.push('/')
   if (e.key === 'p')
