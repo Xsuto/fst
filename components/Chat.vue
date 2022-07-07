@@ -1,18 +1,18 @@
 <script setup lang="ts">
+import setControls from '~/composables/setControls'
+
 interface Props {
   channel: string
 }
-
 const props = defineProps<Props>()
-const router = useRouter()
 
 const chat = $ref(null)
 const filter = $ref('')
 const isTyping = $ref(false)
+const showChat = $ref(true)
+const showSearchBar = $ref(false)
+const autoscroll = $ref(true)
 
-let shouldShow = $ref(true)
-let showSearchBar = $ref(false)
-let autoscroll = $ref(true)
 function updateScroll() {
   // chat.$el.scrollTop = chat.$el.scrollHeight
   chat.scrollTop = chat.scrollHeight
@@ -22,39 +22,17 @@ const { messages, client } = $(await getMessages({
   filter: $$(filter),
   scroll: { autoscroll: $$(autoscroll), updateScroll },
 }))
-function handleKeyDown(e) {
-  if (e.keyCode === 27)
-    showSearchBar = false
-
-  if (isTyping)
-    return
-
-  if (e.key === 'c') {
-    showSearchBar = false
-    shouldShow = !shouldShow
-  }
-  if (e.key === 'q')
-    router.push('/')
-  if (e.key === 'p')
-    client.disconnect()
-  if (e.key === 'r')
-    client.connect()
-  if (e.key === 'f')
-    showSearchBar = !showSearchBar
-  if (e.key === 's')
-    autoscroll = !autoscroll
-}
-
-window.addEventListener('keydown', handleKeyDown)
-onUnmounted(() => {
-  window.removeEventListener('keydown', handleKeyDown)
+onUnmounted(async () => {
+  await client.removeAllListeners()
+  await client.disconnect()
 })
+setControls($$({ autoscroll, isTyping, showSearchBar, showChat }))
 </script>
 
 <template>
-  <main :class="{ showContainer: shouldShow }">
+  <main :class="{ showContainer: showChat }">
     <SearchBar v-if="showSearchBar" v-model:isTyping="isTyping" v-model:filter="filter" />
-    <ul ref="chat" :class="{ showMessages: shouldShow } ">
+    <ul ref="chat" :class="{ showMessages: showChat } ">
       <Message v-for="message in messages" :key="message.id" :message="message" />
     </ul>
   </main>
@@ -63,7 +41,7 @@ onUnmounted(() => {
 <style lang="scss" scoped>
 main {
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
   height: 50vh;
   position: absolute;
   right: 0;
@@ -73,12 +51,12 @@ main {
   opacity: 0;
   display: flex;
   flex-direction: column;
+  transition: opacity 500ms;
 }
 ul {
   flex-grow: 1;
   position: relative;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   margin: 0;
   padding: 0.5rem 1rem 6rem 0.5rem;
@@ -91,7 +69,7 @@ ul {
     display: none;
   }
 
-  -ms-overflow-style: none; /* IE and Edge */
+  -ms-overflow-style: none; /* IE and Edgdde */
   scrollbar-width: none; /* Firefox */
 }
 //
@@ -99,21 +77,8 @@ ul {
   opacity: 1;
   width: clamp(20%,23vw,25%);
   height: 100%;
-  transition: opacity 600ms, width 0s 0s, height 0s 0s;
 }
 .showMessages {
   opacity: 1;
 }
-//.list-enter-active,
-//.list-leave-active {
-//  transition: all 0.5s ease;
-//}
-//.list-enter-from,
-//.list-leave-to {
-//  opacity: 0;
-//  transform: translateX(30px);
-//}
-//.list-leave-active {
-//  position: absolute;
-//}
 </style>
