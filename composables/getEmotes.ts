@@ -39,7 +39,7 @@ export async function getEmotes(channel: string) {
       EmotesGlobal7tvPromise, EmotesBttvPromise,
       EmotesFfzPromise, EmotesFfzGlobalPromise])
 
-  const bttvEmotes = $computed(() => bttvResponse.value.sharedEmotes)
+  const bttvEmotes = $computed(() => bttvResponse.value?.sharedEmotes || [])
   for (const { name, urls } of emotes7tv.value) {
     emotes.push({
       name,
