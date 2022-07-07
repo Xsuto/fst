@@ -13,10 +13,11 @@ interface BttvResponse {
 }
 interface FfzResponse {
   sets: {
-    [it: number]: {
+    [key: number]: {
       emoticons: {
+        name: string
         urls: string[]
-      }
+      }[]
     }
   }
 }
