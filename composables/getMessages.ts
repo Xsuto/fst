@@ -1,15 +1,16 @@
 import type { Ref } from '@vue/reactivity'
+import type { Client } from 'tmi.js'
 import tmi from 'tmi.js'
 import { v4 as uuid } from 'uuid'
 import type Message from '@/interfaces/Message'
 const MAX_MESSAGE_HISTORY = 1000
+interface Props {
+  channel: string
+  filter: Ref<string>
+  scroll: { autoscroll: Ref<boolean>; updateScroll: () => void }
+}
 
-export default async function (
-  props: {
-    channel: string
-    filter: Ref<string>
-    scroll: { autoscroll: Ref<boolean>; updateScroll: () => void }
-  }) {
+export default async function (props: Props) {
   const { channel, scroll: { autoscroll, updateScroll } } = $(props)
   const filterDebounced = $(refDebounced(props.filter, 300))
   const client = new tmi.Client({
@@ -19,12 +20,12 @@ export default async function (
     },
     channels: [channel],
   })
-  const messages = $ref<Message[]>([])
+  const messages = $(useState<Message[]>(`messages-${channel}`, () => []))
   const filteredMessages = $computed(() => messages.filter(it =>
     it.words.map(it => it.content).join(' ').toLowerCase().includes(filterDebounced.toLowerCase(),
     )))
   await client.connect()
-  const emotes = $(await getEmotes(channel))
+  const emotes = $(await useState(`emotes-${channel}`, async () => await getEmotes(channel)).value)
   client.on('message', (_, tags, message) => {
     const data = message.split(' ').map((it) => {
       for (const emote of emotes) {
@@ -42,9 +43,6 @@ export default async function (
       messages.shift()
     if (autoscroll)
       updateScroll()
-  })
-  onUnmounted(() => {
-    client.disconnect()
   })
   return { messages: $$(filteredMessages), client: $$(client) }
 }
