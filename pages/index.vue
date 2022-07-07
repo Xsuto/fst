@@ -2,21 +2,20 @@
 import { v4 as uuid } from 'uuid'
 import IconDelete from '~icons/fluent/delete-16-regular'
 const channel = $ref('')
-let savedChannels = $ref((() => JSON.parse(localStorage.getItem('channels')))())
+interface Channel {
+  channel: string
+  id: string
+}
+let savedChannels = $ref(useLocalStorage<Channel[]>('channels', []))
 const router = useRouter()
 function handleClick() {
   if (!channel)
     return
-  const tempSavedChannels = JSON.parse(localStorage.getItem('channels')) || []
-  localStorage.setItem(
-    'channels',
-    JSON.stringify([...tempSavedChannels, { channel, id: uuid() }]),
-  )
+  savedChannels = [...savedChannels, { channel, id: uuid() }]
   router.push({ path: `/dashboard/${channel}` })
 }
 function handleDelete(id: string) {
   savedChannels = savedChannels.filter(it => it.id !== id)
-  localStorage.setItem('channels', JSON.stringify(savedChannels))
 }
 </script>
 
