@@ -58,7 +58,7 @@ export async function getEmotes(channel: string) {
       url: `https://cdn.betterttv.net/emote/${emote.id}/1x`,
     })
   }
-  for (const emoteKey in ffzGlobalEmotes.value.sets) {
+  for (const emoteKey in ffzGlobalEmotes.value?.sets) {
     const it = ffzGlobalEmotes.value.sets[emoteKey].emoticons
     for (const emote of it) {
       emotes.push({
@@ -67,7 +67,7 @@ export async function getEmotes(channel: string) {
       })
     }
   }
-  for (const emoteKey in ffzUserEmotes.value.sets) {
+  for (const emoteKey in ffzUserEmotes.value?.sets) {
     const it = ffzUserEmotes.value.sets[emoteKey].emoticons
     for (const emote of it) {
       emotes.push({
