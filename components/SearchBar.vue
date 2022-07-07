@@ -40,19 +40,14 @@ onUnmounted(() => {
 
 <style scoped>
 div {
-  box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.7);
-  height: 10vh;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 10;
-  width: clamp(20%,23vw,25%);
+  position: relative;
+  height: 10%;
   display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  align-items: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 label {
   color: white;
