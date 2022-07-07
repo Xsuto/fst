@@ -16,7 +16,8 @@ export default async function (
     filter: Ref<string>
     scroll: { autoscroll: Ref<boolean>; updateScroll: () => void }
   }) {
-  const { channel, filter, scroll: { autoscroll, updateScroll } } = $(props)
+  const { channel, scroll: { autoscroll, updateScroll } } = $(props)
+  const filterDebounced = $(refDebounced(props.filter, 300))
   const client = new tmi.Client({
     connection: {
       secure: true,
@@ -25,7 +26,7 @@ export default async function (
     channels: [channel],
   })
   const messages = $ref<Message[]>([])
-  const filteredMessages = $computed(() => messages.filter(it => it.text.includes(filter)))
+  const filteredMessages = $computed(() => messages.filter(it => it.text.includes(filterDebounced)))
   await client.connect()
   const emotes = $(await getEmotes(channel))
   client.on('message', (_, tags, message) => {
