@@ -28,12 +28,12 @@ function handleLinkClick(channel: Channel) {
   <div class="container">
     <div class="content">
       <label for="channel">Channel name</label>
-      <form>
+      <main>
         <input v-model="channel" placeholder="Channel name" name="channel" required>
         <button @click="handleClick">
           Watch!
         </button>
-      </form>
+      </main>
       <div class="links">
         <h1>Previously Watched</h1>
         <ul class="resizable-content">
@@ -58,7 +58,7 @@ function handleLinkClick(channel: Channel) {
 label {
   font-size: 5rem
 }
-form {
+main {
   width: 100%;
   display: flex;
   gap: 5%
