@@ -32,7 +32,7 @@ setControls($$({ autoscroll, isTyping, showSearchBar, showChat }))
 <template>
   <main :class="{ showContainer: showChat }">
     <SearchBar v-if="showSearchBar" v-model:isTyping="isTyping" v-model:filter="filter" />
-    <ul @scroll="autoscroll = false" ref="chat" :class="{ showMessages: showChat } ">
+    <ul ref="chat" :class="{ showMessages: showChat } ">
       <Message v-for="message in messages" :key="message.id" :message="message" />
     </ul>
   </main>
