@@ -18,7 +18,7 @@ function handleDelete(id: string) {
   savedChannels = savedChannels.filter(it => it.id !== id)
 }
 
-function handleLinkClink(channel: Channel) {
+function handleLinkClick(channel: Channel) {
   const tempSavedChannels = savedChannels.filter(it => it.id !== channel.id)
   savedChannels = [channel, ...tempSavedChannels]
 }
@@ -38,7 +38,7 @@ function handleLinkClink(channel: Channel) {
         <h1>Previously Watched</h1>
         <ul class="resizable-content">
           <li v-for="savedChannel in savedChannels" :key="savedChannel.id">
-            <NuxtLink :to="{ path: `/dashboard/${savedChannel.channel}` }" @click="handleLinkClink(savedChannel)">
+            <NuxtLink :to="{ path: `/dashboard/${savedChannel.channel}` }" @click="handleLinkClick(savedChannel)">
               {{
                 savedChannel.channel
               }}
