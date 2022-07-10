@@ -20,9 +20,18 @@ export default async function (props: Props) {
     channels: [channel],
   })
   const messages = $(useState<Message[]>(`messages-${channel}`, () => []))
-  const filteredMessages = $computed(() => messages.filter(it =>
-    it.words.map(it => it.content).join(' ').toLowerCase().includes(filterDebounced.toLowerCase(),
-    )))
+  const filteredMessages = $computed(() => {
+    if (!filterDebounced.length)
+      return messages
+    return messages.filter((it) => {
+      const filterValue = filterDebounced.toLowerCase()
+      if (filterValue.startsWith('from:')) {
+        const user = filterValue.split(':')[1].toLowerCase()
+        return it.tags['display-name'].startsWith(user)
+      }
+      return it.words.map(it => it.content).join(' ').toLowerCase().includes(filterDebounced.toLowerCase())
+    })
+  })
   await client.connect()
   const emotes = $(await useState(`emotes-${channel}`, async () => await getEmotes(channel)).value)
   client.on('message', (_, tags, message) => {
