@@ -8,10 +8,11 @@ interface Channel {
 }
 let savedChannels = $ref(useLocalStorage<Channel[]>('channels', []))
 const router = useRouter()
-function handleClick() {
+function handleSubmit() {
   if (!channel)
     return
-  savedChannels = [{ channel, id: uuid() }, ...savedChannels]
+  if (!savedChannels.some(it => it.channel === channel))
+    savedChannels = [{ channel, id: uuid() }, ...savedChannels]
   router.push({ path: `/dashboard/${channel}` })
 }
 function handleDelete(id: string) {
@@ -28,12 +29,12 @@ function handleLinkClick(channel: Channel) {
   <div class="container">
     <div class="content">
       <label for="channel">Channel name</label>
-      <main>
+      <form @submit.prevent="handleSubmit">
         <input v-model="channel" placeholder="Channel name" name="channel" required>
-        <button @click="handleClick">
+        <button type="submit">
           Watch!
         </button>
-      </main>
+      </form>
       <div class="links">
         <h1>Previously Watched</h1>
         <ul class="resizable-content">
