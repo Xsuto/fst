@@ -23,7 +23,7 @@ const { messages, client } = $(await getMessages({
   scroll: { autoscroll: $$(autoscroll), updateScroll },
 }))
 onUnmounted(async () => {
-  await client.removeAllListeners()
+  client.removeAllListeners()
   await client.disconnect()
 })
 setControls($$({ autoscroll, isTyping, showSearchBar, showChat }))
@@ -32,7 +32,7 @@ setControls($$({ autoscroll, isTyping, showSearchBar, showChat }))
 <template>
   <main :class="{ showContainer: showChat }">
     <SearchBar v-if="showSearchBar" v-model:isTyping="isTyping" v-model:filter="filter" />
-    <ul ref="chat" :class="{ showMessages: showChat } ">
+    <ul @scroll="autoscroll = false" ref="chat" :class="{ showMessages: showChat } ">
       <Message v-for="message in messages" :key="message.id" :message="message" />
     </ul>
   </main>
@@ -51,7 +51,7 @@ main {
   opacity: 0;
   display: flex;
   flex-direction: column;
-  transition: opacity 500ms;
+  transition: opacity 500ms, width 0ms 500ms, height 0ms 500ms;
 }
 ul {
   flex-grow: 1;
@@ -77,6 +77,7 @@ ul {
   opacity: 1;
   width: clamp(20%,23vw,25%);
   height: 100%;
+  transition: opacity 500ms, width 0ms 0ms, height 0ms 0ms;
 }
 .showMessages {
   opacity: 1;
