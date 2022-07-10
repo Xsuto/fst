@@ -11,11 +11,16 @@ const router = useRouter()
 function handleClick() {
   if (!channel)
     return
-  savedChannels = [...savedChannels, { channel, id: uuid() }]
+  savedChannels = [{ channel, id: uuid() }, ...savedChannels]
   router.push({ path: `/dashboard/${channel}` })
 }
 function handleDelete(id: string) {
   savedChannels = savedChannels.filter(it => it.id !== id)
+}
+
+function handleLinkClink(channel: Channel) {
+  const tempSavedChannels = savedChannels.filter(it => it.id !== channel.id)
+  savedChannels = [channel, ...tempSavedChannels]
 }
 </script>
 
@@ -23,17 +28,17 @@ function handleDelete(id: string) {
   <div class="container">
     <div class="content">
       <label for="channel">Channel name</label>
-      <main>
+      <form>
         <input v-model="channel" placeholder="Channel name" name="channel" required>
         <button @click="handleClick">
           Watch!
         </button>
-      </main>
+      </form>
       <div class="links">
         <h1>Previously Watched</h1>
         <ul class="resizable-content">
           <li v-for="savedChannel in savedChannels" :key="savedChannel.id">
-            <NuxtLink :to="{ path: `/dashboard/${savedChannel.channel}` }">
+            <NuxtLink :to="{ path: `/dashboard/${savedChannel.channel}` }" @click="handleLinkClink(savedChannel)">
               {{
                 savedChannel.channel
               }}
@@ -53,7 +58,7 @@ function handleDelete(id: string) {
 label {
   font-size: 5rem
 }
-main {
+form {
   width: 100%;
   display: flex;
   gap: 5%
