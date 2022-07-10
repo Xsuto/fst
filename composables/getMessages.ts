@@ -1,5 +1,4 @@
 import type { Ref } from '@vue/reactivity'
-import type { Client } from 'tmi.js'
 import tmi from 'tmi.js'
 import { v4 as uuid } from 'uuid'
 import type Message from '@/interfaces/Message'
@@ -44,5 +43,5 @@ export default async function (props: Props) {
     if (autoscroll)
       updateScroll()
   })
-  return { messages: $$(filteredMessages), client: $$(client) }
+  return { messages: $$(filteredMessages), client }
 }

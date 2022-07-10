@@ -3,7 +3,7 @@ import type Message from '@/interfaces/Message'
 interface Props {
   message: Message
 }
-const props = defineProps<Props>()
+defineProps<Props>()
 </script>
 
 <template>
