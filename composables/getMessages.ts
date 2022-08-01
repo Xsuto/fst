@@ -2,7 +2,7 @@ import type { Ref } from '@vue/reactivity'
 import tmi from 'tmi.js'
 import { v4 as uuid } from 'uuid'
 import type Message from '@/interfaces/Message'
-const MAX_MESSAGE_HISTORY = 1000
+const MAX_MESSAGE_HISTORY = 500
 interface Props {
   channel: string
   filter: Ref<string>
