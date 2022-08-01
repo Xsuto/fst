@@ -12,8 +12,7 @@
   "dependencies": {
     "sass": "^1.53.0",
     "tmi.js": "^1.5.0",
-    "uuid": "^8.3.2",
-    "vue-resizable": "^2.1.5"
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
