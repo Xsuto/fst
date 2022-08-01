@@ -1,4 +1,5 @@
-import type { Ref } from '@vue/reactivity'
+import type { ReactiveVariable } from 'vue/macros'
+import { Position } from '@/interfaces/ChatPosition'
 
 enum Controls {
   HideChat = 'c',
@@ -6,17 +7,21 @@ enum Controls {
   ToggleAutoScroll = 's',
   CloseSearchBar = 'Escape',
   ExitPage = 'q',
+  MoveChatToRight = 'ArrowRight',
+  MoveChatToLeft = 'ArrowLeft',
 }
 interface Props {
-  showSearchBar: Ref<boolean>
-  showChat: Ref<boolean>
-  isTyping: Ref<boolean>
-  autoscroll: Ref<boolean>
+  showSearchBar: ReactiveVariable<boolean>
+  showChat: ReactiveVariable<boolean>
+  isTyping: ReactiveVariable<boolean>
+  autoscroll: ReactiveVariable<boolean>
+  chatPosition: ReactiveVariable<Position>
 }
 
 export default function (props: Props) {
   // eslint-disable-next-line prefer-const
-  let { showSearchBar, isTyping, showChat, autoscroll } = $(props)
+  let { showSearchBar, isTyping, showChat, autoscroll, chatPosition } = $(props)
+  const alt = $(useKeyModifier('Alt'))
 
   // Allow only one instance of Shortcuts
   let created = $(useState('shortcutsCreated', () => false))
@@ -49,5 +54,15 @@ export default function (props: Props) {
     if (isTyping)
       return
     showSearchBar = !showSearchBar
+  })
+  onKeyStroke(Controls.MoveChatToRight, () => {
+    if (isTyping || !alt)
+      return
+    chatPosition = Position.right
+  })
+  onKeyStroke(Controls.MoveChatToLeft, () => {
+    if (isTyping || !alt)
+      return
+    chatPosition = Position.left
   })
 }

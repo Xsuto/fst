@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import setControls from '~/composables/setControls'
-
+import { Position } from '@/interfaces/ChatPosition'
 interface Props {
   channel: string
 }
 const props = defineProps<Props>()
 
 const chat = $ref(null)
+const chatPosition = $ref(Position.right)
 const filter = $ref('')
 const isTyping = $ref(false)
 const showChat = $ref(true)
@@ -26,11 +26,11 @@ onUnmounted(async () => {
   client.removeAllListeners()
   await client.disconnect()
 })
-setControls($$({ autoscroll, isTyping, showSearchBar, showChat }))
+setControls($$({ autoscroll, isTyping, showSearchBar, showChat, chatPosition }))
 </script>
 
 <template>
-  <main :class="{ showContainer: showChat }">
+  <main :class="{ showContainer: showChat, showChatOnLeftSide: chatPosition === Position.left }">
     <SearchBar v-if="showSearchBar" v-model:isTyping="isTyping" v-model:filter="filter" />
     <ul ref="chat" :class="{ showMessages: showChat } ">
       <Message v-for="message in messages" :key="message.id" :message="message" />
@@ -78,6 +78,10 @@ ul {
   width: clamp(20%,23vw,25%);
   height: 100%;
   transition: opacity 500ms, width 0ms 0ms, height 0ms 0ms;
+}
+.showChatOnLeftSide {
+  left: 0;
+  right: unset;
 }
 .showMessages {
   opacity: 1;
