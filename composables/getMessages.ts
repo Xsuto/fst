@@ -27,7 +27,7 @@ export default async function (props: Props) {
       const filterValue = filterDebounced.toLowerCase()
       if (filterValue.startsWith('from:')) {
         const user = filterValue.split(':')[1].toLowerCase()
-        return it.tags['display-name'].startsWith(user)
+        return it.tags['display-name'].toLowerCase().startsWith(user)
       }
       return it.words.map(it => it.content).join(' ').toLowerCase().includes(filterDebounced.toLowerCase())
     })
