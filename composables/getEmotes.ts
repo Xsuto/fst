@@ -2,7 +2,7 @@ interface Emote7tv {
   name: string
   width: number[]
   height: number[]
-  urls: string[]
+  urls: [string[]]
 }
 interface EmoteBttv {
   code: string
