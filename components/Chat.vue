@@ -6,7 +6,7 @@ interface Props {
 const props = defineProps<Props>()
 
 const chat = $ref(null)
-const chatPosition = $ref(Position.right)
+const chatPosition = $(useLocalStorage<Position>('chat-position', Position.right))
 const filter = $ref('')
 const isTyping = $ref(false)
 const showChat = $ref(true)
