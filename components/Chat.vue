@@ -75,7 +75,7 @@ ul {
 //
 .showContainer {
   opacity: 1;
-  width: clamp(400px,23vw,25%);
+  width: max(400px,20%);
   height: 100%;
   transition: opacity 500ms, width 0ms 0ms, height 0ms 0ms;
 }
