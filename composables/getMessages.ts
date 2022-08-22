@@ -26,23 +26,22 @@ export default async function (props: Props) {
     return messages.filter((it) => {
       const filterValue = filterDebounced.toLowerCase()
       if (filterValue.startsWith('from:')) {
-        const user = filterValue.split(':')[1].toLowerCase()
+        const user = filterValue.split(':')[1]
         return it.tags['display-name'].toLowerCase().startsWith(user)
       }
-      return it.words.map(it => it.content).join(' ').toLowerCase().includes(filterDebounced.toLowerCase())
+      return it.raw_message_content.includes(filterValue)
     })
   })
   await client.connect()
-  const emotes = $(await useState(`emotes-${channel}`, async () => await getEmotes(channel)).value)
+  const emotes = await getEmotes(channel)
   client.on('message', (_, tags, message) => {
     const data = message.split(' ').map((it) => {
-      for (const emote of emotes) {
-        if (emote.name === it)
-          return { content: emote.url, isEmote: true }
-      }
+      if (emotes.has(it))
+        return { content: emotes.get(it), isEmote: true }
       return { content: it, isEmote: false }
     })
     messages.push({
+      raw_message_content: message.toLowerCase(),
       words: data,
       id: uuid(),
       tags,

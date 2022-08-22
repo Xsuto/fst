@@ -21,12 +21,8 @@ interface FfzResponse {
     }
   }
 }
-interface Emote {
-  name: string
-  url: string
-}
 export async function getEmotes(channel: string) {
-  const emotes = $ref<Emote[]>([])
+  const emotes = new Map<string, string>()
   const { data: twitchUser } = $(await useFetch<{ id: string }>(`https://api.ivr.fi/twitch/resolve/${channel}`))
   const Emotes7tvPromise = useFetch<Emote7tv[]>(`https://api.7tv.app/v2/users/${channel}/emotes`, { default: () => [] })
   const EmotesGlobal7tvPromise = useFetch<Emote7tv[]>('https://api.7tv.app/v2/emotes/global')
@@ -42,47 +38,31 @@ export async function getEmotes(channel: string) {
       EmotesFfzPromise, EmotesFfzGlobalPromise])
 
   const bttvEmotes = $computed(() => bttvResponse.value?.sharedEmotes || [])
-  for (const { name, urls } of emotes7tv.value) {
-    emotes.push({
-      name,
-      url: urls[0][1],
-    })
-  }
-  for (const { name, urls } of globalEmotes7tv.value) {
-    emotes.push({
-      name,
-      url: urls[0][1],
-    })
-  }
-  for (const emote of bttvEmotes) {
-    emotes.push({
-      name: emote.code,
-      url: `https://cdn.betterttv.net/emote/${emote.id}/1x`,
-    })
-  }
-  for (const emote of globalEmotesBttv.value) {
-    emotes.push({
-      name: emote.code,
-      url: `https://cdn.betterttv.net/emote/${emote.id}/1x`,
-    })
-  }
+  for (const { name, urls } of emotes7tv.value)
+    emotes.set(name, urls[0][1])
+
+  for (const { name, urls } of globalEmotes7tv.value)
+    emotes.set(name, urls[0][1])
+
+  for (const emote of bttvEmotes)
+    emotes.set(emote.code, `https://cdn.betterttv.net/emote/${emote.id}/1x`)
+
+  for (const emote of globalEmotesBttv.value)
+    emotes.set(emote.code, `https://cdn.betterttv.net/emote/${emote.id}/1x`)
+
   for (const emoteKey in ffzGlobalEmotes.value?.sets) {
     const it = ffzGlobalEmotes.value.sets[emoteKey].emoticons
-    for (const emote of it) {
-      emotes.push({
-        name: emote.name,
-        url: `https://${emote.urls['1']}`,
-      })
-    }
+    for (const emote of it)
+      emotes.set(emote.name, `https://${emote.urls['1']}`)
   }
   for (const emoteKey in ffzUserEmotes.value?.sets) {
     const it = ffzUserEmotes.value.sets[emoteKey].emoticons
-    for (const emote of it) {
-      emotes.push({
-        name: emote.name,
-        url: `https://${emote.urls['1']}`,
-      })
-    }
+    for (const emote of it)
+      emotes.set(emote.name, `https://${emote.urls['1']}`)
   }
-  return $$(emotes)
+
+  // Custom emotes
+  emotes.set('gucioXD', 'https://static-cdn.jtvnw.net/emoticons/v2/449534/default/dark/1.0')
+
+  return emotes
 }
