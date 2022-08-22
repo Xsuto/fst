@@ -20,7 +20,7 @@ interface Props {
 }
 
 export default function (props: Props) {
-  // eslint-disable-next-line prefer-const
+  // eslint-disable-next-line prefer-const,@typescript-eslint/no-unused-vars
   let { showSearchBar, isTyping, showChat, autoscroll, chatPosition } = $(props)
   const alt = $(useKeyModifier('Alt'))
 
