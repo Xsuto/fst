@@ -1,4 +1,4 @@
-import type { Userstate } from 'tmi.js'
+import type { Userstate } from "tmi.js"
 
 export default interface Message {
   id: string

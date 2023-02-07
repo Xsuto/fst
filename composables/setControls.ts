@@ -1,14 +1,14 @@
-import type { Ref } from 'vue'
-import { Position } from '@/interfaces/ChatPosition'
+import type { Ref } from "vue"
+import { Position } from "@/interfaces/ChatPosition"
 
 enum Controls {
-  HideChat = 'c',
-  ToggleSearchBar = 'f',
-  ToggleAutoScroll = 's',
-  CloseSearchBar = 'Escape',
-  ExitPage = 'q',
-  MoveChatToRight = 'ArrowRight',
-  MoveChatToLeft = 'ArrowLeft',
+  HideChat = "c",
+  ToggleSearchBar = "f",
+  ToggleAutoScroll = "s",
+  CloseSearchBar = "Escape",
+  ExitPage = "q",
+  MoveChatToRight = "ArrowRight",
+  MoveChatToLeft = "ArrowLeft",
 }
 
 interface Props {
@@ -22,10 +22,10 @@ interface Props {
 export default function (props: Props) {
   // eslint-disable-next-line prefer-const,@typescript-eslint/no-unused-vars
   let { showSearchBar, isTyping, showChat, autoscroll, chatPosition } = $(props)
-  const alt = $(useKeyModifier('Alt'))
+  const alt = $(useKeyModifier("Alt"))
 
   // Allow only one instance of Shortcuts
-  let created = $(useState('shortcutsCreated', () => false))
+  let created = $(useState("shortcutsCreated", () => false))
   if (created)
     return
   created = true
@@ -40,7 +40,7 @@ export default function (props: Props) {
   onKeyStroke(Controls.ExitPage, () => {
     if (isTyping)
       return
-    router.push('/')
+    router.push("/")
   })
 
   onKeyStroke(Controls.HideChat, () => {

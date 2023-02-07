@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { v4 as uuid } from 'uuid'
-import IconDelete from '~icons/fluent/delete-16-regular'
 const channel = $ref('')
 interface Channel {
   channel: string
@@ -9,10 +8,12 @@ interface Channel {
 let savedChannels = $ref(useLocalStorage<Channel[]>('channels', []))
 const router = useRouter()
 function handleSubmit() {
-  if (!channel)
+  if (!channel) {
     return
-  if (!savedChannels.some(it => it.channel === channel))
+  }
+  if (!savedChannels.some(it => it.channel === channel)) {
     savedChannels = [{ channel, id: uuid() }, ...savedChannels]
+  }
   router.push({ path: `/dashboard/${channel}` })
 }
 function handleDelete(id: string) {
@@ -27,6 +28,7 @@ function handleLinkClick(channel: Channel) {
 
 <template>
   <div class="container">
+    <NuxtLoadingIndicator />
     <div class="content">
       <label for="channel">Channel name</label>
       <form @submit.prevent="handleSubmit">
@@ -44,7 +46,7 @@ function handleLinkClick(channel: Channel) {
                 savedChannel.channel
               }}
             </NuxtLink>
-            <IconDelete class="deleteIcon" @click="handleDelete(savedChannel.id)" />
+            <Icon name="ic:outline-delete-forever" class="deleteIcon" @click="handleDelete(savedChannel.id)" />
           </li>
         </ul>
       </div>

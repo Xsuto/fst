@@ -13,9 +13,9 @@ onMounted(() => {
   width = window.innerWidth
   height = window.innerHeight
 })
-window.addEventListener('resize', handleResize)
+window.addEventListener("resize", handleResize)
 onUnmounted(() => {
-  window.removeEventListener('resize', handleResize)
+  window.removeEventListener("resize", handleResize)
 })
 </script>
 

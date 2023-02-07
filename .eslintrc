@@ -1,6 +1,14 @@
 {
   "extends": "@antfu",
   "rules": {
+    "brace-style": "off",
+    "no-console": "off",
+    "@typescript-eslint/brace-style": [
+      "error",
+      "1tbs"
+    ],
+    "@typescript-eslint/quotes": ["error","double"],
+    "quotes": ["error","double"],
     "max-len": ["error", { "code":  120 }]
   }
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type Message from '@/interfaces/Message'
+import type Message from "@/interfaces/Message"
 interface Props {
   message: Message
 }
@@ -24,7 +24,7 @@ defineProps<Props>()
     </span>
     <p>{{ message.tags["display-name"] }}:</p>
     <span v-for="(it, i) in message.words" :key="i">
-      <img v-if="it.isEmote" alt="emote" :src="it.content">
+      <img v-if="it.isEmote" class="emote" alt="emote" :src="it.content">
       <template v-else>
         <NuxtLink
           v-if="!it.isEmote && it.content.startsWith('http')"
@@ -39,6 +39,10 @@ defineProps<Props>()
 </template>
 
 <style lang="scss" scoped>
+.emote {
+  min-width: 30px;
+  min-height: 30px;
+}
 li {
   box-sizing: border-box;
   position: relative;

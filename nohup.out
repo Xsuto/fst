@@ -1,0 +1,1108 @@
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 1384ms
+[K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 6.78s
+✔ Nitro built in 1688 ms
+🚀 A new version of Tauri CLI is available! [1.0.4]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 1305ms
+[K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 7.40s
+✔ Nitro built in 1694 ms
+🚀 A new version of Tauri CLI is available! [1.0.4]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 1416ms
+✔ Nitro built in 1250 ms
+[K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 5.70s
+🚀 A new version of Tauri CLI is available! [1.0.4]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 3074ms
+✔ Nitro built in 2415 ms
+[K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 13.67s
+2022-07-20 23:57:37.178 fst[47267:4341527] NSWindow warning: adding an unknown subview: <WKInspectorWKWebView: 0x7f8ef243dbf0>. Break on NSLog to debug.
+2022-07-20 23:57:37.223 fst[47267:4341527] Call stack:
+(
+	0   AppKit                              0x00007ff81d683f82 -[NSThemeFrame addSubview:] + 112
+	1   AppKit                              0x00007ff81d683cc3 -[NSView addSubview:positioned:relativeTo:] + 203
+	2   AppKit                              0x00007ff81d683b74 -[NSThemeFrame addSubview:positioned:relativeTo:] + 46
+	3   WebKit                              0x00007ff91f690c8d _ZN6WebKit19WebInspectorUIProxy14platformAttachEv + 367
+	4   WebKit                              0x00007ff91f853366 _ZN6WebKit19WebInspectorUIProxy4openEv + 96
+	5   WebKit                              0x00007ff91fab1129 _ZN6WebKit19WebInspectorUIProxy17didReceiveMessageERN3IPC10ConnectionERNS1_7DecoderE + 237
+	6   WebKit                              0x00007ff91f5bea69 _ZN3IPC18MessageReceiverMap15dispatchMessageERNS_10ConnectionERNS_7DecoderE + 367
+	7   WebKit                              0x00007ff91f7d922f _ZN6WebKit15WebProcessProxy17didReceiveMessageERN3IPC10ConnectionERNS1_7DecoderE + 31
+	8   WebKit                              0x00007ff91f5b22f1 _ZN3IPC10Connection15dispatchMessageENSt3__110unique_ptrINS_7DecoderENS1_14default_deleteIS3_EEEE + 221
+	9   WebKit                              0x00007ff91f5b1c97 _ZN3IPC10Connection24dispatchIncomingMessagesEv + 479
+	10  JavaScriptCore                      0x00007ff8334de0ef _ZN3WTF7RunLoop11performWorkEv + 431
+	11  JavaScriptCore                      0x00007ff8334debda _ZN3WTF7RunLoop11performWorkEPv + 26
+	12  CoreFoundation                      0x00007ff81ac2019b __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17
+	13  CoreFoundation                      0x00007ff81ac20103 __CFRunLoopDoSource0 + 180
+	14  CoreFoundation                      0x00007ff81ac1fe7d __CFRunLoopDoSources0 + 242
+	15  CoreFoundation                      0x00007ff81ac1e898 __CFRunLoopRun + 892
+	16  CoreFoundation                      0x00007ff81ac1de5c CFRunLoopRunSpecific + 562
+	17  HIToolbox                           0x00007ff8238c55e6 RunCurrentEventLoopInMode + 292
+	18  HIToolbox                           0x00007ff8238c534a ReceiveNextEventCommon + 594
+	19  HIToolbox                           0x00007ff8238c50e5 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+	20  AppKit                              0x00007ff81d65d1fd _DPSNextEvent + 927
+	21  AppKit                              0x00007ff81d65b8ba -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1394
+	22  AppKit                              0x00007ff81d64df69 -[NSApplication run] + 586
+	23  fst                                 0x00000001098743e6 _ZN60_$LT$$LP$$RP$$u20$as$u20$objc..message..MessageArguments$GT$6invoke17h9a5161727b272c8dE + 70
+	24  fst                                 0x00000001098787ec _ZN4objc7message8platform15send_unverified28_$u7b$$u7b$closure$u7d$$u7d$17h2c9f3c4ce0f13a00E + 44
+	25  fst                                 0x000000010987772d _ZN14objc_exception3try28_$u7b$$u7b$closure$u7d$$u7d$17ha6ebb303f72d1ea0E + 45
+	26  fst                                 0x00000001098760d5 _ZN14objc_exception10try_no_ret24try_objc_execute_closure17h4c3c276691d967a2E + 85
+	27  fst                                 0x0000000109885bfe RustObjCExceptionTryCatch + 30
+	28  fst                                 0x0000000109875078 _ZN14objc_exception10try_no_ret17h94b5dfdca0e0663aE + 264
+	29  fst                                 0x0000000109876dc3 _ZN14objc_exception3try17hb2569f4aa15cda91E + 67
+	30  fst                                 0x000000010987c548 _ZN4objc9exception3try17h13623f6e0530e889E + 40
+	31  fst                                 0x000000010987845d _ZN4objc7message8platform15send_unverified17hf2a0697f75ef9a02E + 125
+	32  fst                                 0x0000000109401b11 _ZN3tao13platform_impl8platform10event_loop18EventLoop$LT$T$GT$10run_return17h9c00d76fd97a27f2E + 1345
+	33  fst                                 0x0000000109402c8d _ZN3tao13platform_impl8platform10event_loop18EventLoop$LT$T$GT$3run17h81c95b724d8163c2E + 61
+	34  fst                                 0x000000010938ebdc _ZN3tao10event_loop18EventLoop$LT$T$GT$3run17h36cadd320e1c32beE + 108
+	35  fst                                 0x0000000109165703 _ZN83_$LT$tauri_runtime_wry..Wry$LT$T$GT$$u20$as$u20$tauri_runtime..Runtime$LT$T$GT$$GT$3run17hf717dc43ee39e6beE + 851
+	36  fst                                 0x000000010916b090 _ZN5tauri3app12App$LT$R$GT$3run17h930f664a6739d8ebE + 304
+	37  fst                                 0x000000010916b33e _ZN5tauri3app16Builder$LT$R$GT$3run17h2ea3d1b583fbb597E + 206
+	38  fst                                 0x0000000109452e98 _ZN3app4main17h1db1573ad545587eE + 9816
+	39  fst                                 0x00000001092489de _ZN4core3ops8function6FnOnce9call_once17h187e71c1937632c6E + 14
+	40  fst                                 0x000000010946d901 _ZN3std10sys_common9backtrace28__rust_begin_short_backtrace17hf632d1ae943fb66aE + 17
+	41  fst                                 0x000000010945bcc4 _ZN3std2rt10lang_start28_$u7b$$u7b$closure$u7d$$u7d$17h00fc6f9fa1c24596E + 20
+	42  fst                                 0x0000000109b5a517 _ZN3std2rt19lang_start_internal17h660bdfa2fad8559bE + 663
+	43  fst                                 0x000000010945bc9e _ZN3std2rt10lang_start17h0b57c4e4033e9548E + 46
+	44  fst                                 0x0000000109452f06 main + 22
+	45  dyld                                0x000000010f56f51e start + 462
+)
+🚀 A new version of Tauri CLI is available! [1.0.4]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 5417ms
+✔ Nitro built in 2251 ms
+[K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 15.31s
+🚀 A new version of Tauri CLI is available! [1.0.4]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+[K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 5.81s
+ℹ Vite client warmed up in 1264ms
+✔ Nitro built in 1712 ms
+
+ ERROR  [h3] write EPIPE
+
+  at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+  at writeGeneric (node:internal/stream_base_commons:151:3)
+  at Socket._writeGeneric (node:net:817:11)
+  at Socket.connect (node:net:799:12)
+  at Object.onceWrapper (node:events:641:28)
+  at Socket.emit (node:events:539:35)
+  at Socket.emit (node:domain:475:12)
+  at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1173:10)
+
+2022-07-20 23:59:34.503 fst[47943:4350225] NSWindow warning: adding an unknown subview: <WKInspectorWKWebView: 0x7ff5bd32a4c0>. Break on NSLog to debug.
+2022-07-20 23:59:34.519 fst[47943:4350225] Call stack:
+(
+	0   AppKit                              0x00007ff81d683f82 -[NSThemeFrame addSubview:] + 112
+	1   AppKit                              0x00007ff81d683cc3 -[NSView addSubview:positioned:relativeTo:] + 203
+	2   AppKit                              0x00007ff81d683b74 -[NSThemeFrame addSubview:positioned:relativeTo:] + 46
+	3   WebKit                              0x00007ff91f690c8d _ZN6WebKit19WebInspectorUIProxy14platformAttachEv + 367
+	4   WebKit                              0x00007ff91f853366 _ZN6WebKit19WebInspectorUIProxy4openEv + 96
+	5   WebKit                              0x00007ff91fab1129 _ZN6WebKit19WebInspectorUIProxy17didReceiveMessageERN3IPC10ConnectionERNS1_7DecoderE + 237
+	6   WebKit                              0x00007ff91f5bea69 _ZN3IPC18MessageReceiverMap15dispatchMessageERNS_10ConnectionERNS_7DecoderE + 367
+	7   WebKit                              0x00007ff91f7d922f _ZN6WebKit15WebProcessProxy17didReceiveMessageERN3IPC10ConnectionERNS1_7DecoderE + 31
+	8   WebKit                              0x00007ff91f5b22f1 _ZN3IPC10Connection15dispatchMessageENSt3__110unique_ptrINS_7DecoderENS1_14default_deleteIS3_EEEE + 221
+	9   WebKit                              0x00007ff91f5b1c97 _ZN3IPC10Connection24dispatchIncomingMessagesEv + 479
+	10  JavaScriptCore                      0x00007ff8334de0ef _ZN3WTF7RunLoop11performWorkEv + 431
+	11  JavaScriptCore                      0x00007ff8334debda _ZN3WTF7RunLoop11performWorkEPv + 26
+	12  CoreFoundation                      0x00007ff81ac2019b __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17
+	13  CoreFoundation                      0x00007ff81ac20103 __CFRunLoopDoSource0 + 180
+	14  CoreFoundation                      0x00007ff81ac1fe7d __CFRunLoopDoSources0 + 242
+	15  CoreFoundation                      0x00007ff81ac1e898 __CFRunLoopRun + 892
+	16  CoreFoundation                      0x00007ff81ac1de5c CFRunLoopRunSpecific + 562
+	17  HIToolbox                           0x00007ff8238c55e6 RunCurrentEventLoopInMode + 292
+	18  HIToolbox                           0x00007ff8238c534a ReceiveNextEventCommon + 594
+	19  HIToolbox                           0x00007ff8238c50e5 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+	20  AppKit                              0x00007ff81d65d1fd _DPSNextEvent + 927
+	21  AppKit                              0x00007ff81d65b8ba -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1394
+	22  AppKit                              0x00007ff81d64df69 -[NSApplication run] + 586
+	23  fst                                 0x000000010d13e3e6 _ZN60_$LT$$LP$$RP$$u20$as$u20$objc..message..MessageArguments$GT$6invoke17h9a5161727b272c8dE + 70
+	24  fst                                 0x000000010d1427ec _ZN4objc7message8platform15send_unverified28_$u7b$$u7b$closure$u7d$$u7d$17h2c9f3c4ce0f13a00E + 44
+	25  fst                                 0x000000010d14172d _ZN14objc_exception3try28_$u7b$$u7b$closure$u7d$$u7d$17ha6ebb303f72d1ea0E + 45
+	26  fst                                 0x000000010d1400d5 _ZN14objc_exception10try_no_ret24try_objc_execute_closure17h4c3c276691d967a2E + 85
+	27  fst                                 0x000000010d14fbfe RustObjCExceptionTryCatch + 30
+	28  fst                                 0x000000010d13f078 _ZN14objc_exception10try_no_ret17h94b5dfdca0e0663aE + 264
+	29  fst                                 0x000000010d140dc3 _ZN14objc_exception3try17hb2569f4aa15cda91E + 67
+	30  fst                                 0x000000010d146548 _ZN4objc9exception3try17h13623f6e0530e889E + 40
+	31  fst                                 0x000000010d14245d _ZN4objc7message8platform15send_unverified17hf2a0697f75ef9a02E + 125
+	32  fst                                 0x000000010cccbb11 _ZN3tao13platform_impl8platform10event_loop18EventLoop$LT$T$GT$10run_return17h9c00d76fd97a27f2E + 1345
+	33  fst                                 0x000000010ccccc8d _ZN3tao13platform_impl8platform10event_loop18EventLoop$LT$T$GT$3run17h81c95b724d8163c2E + 61
+	34  fst                                 0x000000010cc58bdc _ZN3tao10event_loop18EventLoop$LT$T$GT$3run17h36cadd320e1c32beE + 108
+	35  fst                                 0x000000010ca2f703 _ZN83_$LT$tauri_runtime_wry..Wry$LT$T$GT$$u20$as$u20$tauri_runtime..Runtime$LT$T$GT$$GT$3run17hf717dc43ee39e6beE + 851
+	36  fst                                 0x000000010ca35090 _ZN5tauri3app12App$LT$R$GT$3run17h930f664a6739d8ebE + 304
+	37  fst                                 0x000000010ca3533e _ZN5tauri3app16Builder$LT$R$GT$3run17h2ea3d1b583fbb597E + 206
+	38  fst                                 0x000000010cd1ce98 _ZN3app4main17h1db1573ad545587eE + 9816
+	39  fst                                 0x000000010cb129de _ZN4core3ops8function6FnOnce9call_once17h187e71c1937632c6E + 14
+	40  fst                                 0x000000010cd37901 _ZN3std10sys_common9backtrace28__rust_begin_short_backtrace17hf632d1ae943fb66aE + 17
+	41  fst                                 0x000000010cd25cc4 _ZN3std2rt10lang_start28_$u7b$$u7b$closure$u7d$$u7d$17h00fc6f9fa1c24596E + 20
+	42  fst                                 0x000000010d424517 _ZN3std2rt19lang_start_internal17h660bdfa2fad8559bE + 663
+	43  fst                                 0x000000010cd25c9e _ZN3std2rt10lang_start17h0b57c4e4033e9548E + 46
+	44  fst                                 0x000000010cd1cf06 main + 22
+	45  dyld                                0x0000000118a4651e start + 462
+)
+🚀 A new version of Tauri CLI is available! [1.0.4]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 1663ms
+[K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 9.18s
+✔ Nitro built in 2199 ms
+🚀 A new version of Tauri CLI is available! [1.0.4]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 1220ms
+✔ Nitro built in 2005 ms
+[K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 15.71s
+🚀 A new version of Tauri CLI is available! [1.0.5]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    [K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 10.39s
+
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 1988ms
+✔ Nitro built in 2614 ms
+🚀 A new version of Tauri CLI is available! [1.0.5]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 866ms
+✔ Nitro built in 1452 ms
+[K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 9.99s
+🚀 A new version of Tauri CLI is available! [1.0.5]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 1455ms
+✔ Nitro built in 1510 ms
+[K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 5.58s
+
+ ERROR  Transform failed with 2 errors:
+/Users/michalsutowicz/Desktop/dev/apps/fst/composables/setControls.ts:24:2: ERROR: Cannot use "let" as an identifier here:
+/Users/michalsutowicz/Desktop/dev/apps/fst/composables/setControls.ts:24:6: ERROR: Expected ";" but found "created"
+
+
+ ERROR  4:49:08 PM [vite] Internal server error: Transform failed with 2 errors:
+/Users/michalsutowicz/Desktop/dev/apps/fst/composables/setControls.ts:24:2: ERROR: Cannot use "let" as an identifier here:
+/Users/michalsutowicz/Desktop/dev/apps/fst/composables/setControls.ts:24:6: ERROR: Expected ";" but found "created"
+  Plugin: vite:esbuild
+  File: /Users/michalsutowicz/Desktop/dev/apps/fst/composables/setControls.ts
+  
+  Cannot use "let" as an identifier here:
+  22 |  
+  23 |    // Allow only one instance of Shortcuts
+  24 |    let created = $(useState('shortcutsCreated', () => false))
+     |    ^
+  25 |    if (created)
+  26 |      return
+  
+  Expected ";" but found "created"
+  22 |  
+  23 |    // Allow only one instance of Shortcuts
+  24 |    let created = $(useState('shortcutsCreated', () => false))
+     |        ^
+  25 |    if (created)
+  26 |      return
+  
+      at failureErrorWithLog (/Users/michalsutowicz/Desktop/dev/apps/fst/node_modules/.pnpm/esbuild@0.14.48/node_modules/esbuild/lib/main.js:1605:15)
+      at /Users/michalsutowicz/Desktop/dev/apps/fst/node_modules/.pnpm/esbuild@0.14.48/node_modules/esbuild/lib/main.js:1394:29
+      at /Users/michalsutowicz/Desktop/dev/apps/fst/node_modules/.pnpm/esbuild@0.14.48/node_modules/esbuild/lib/main.js:666:9
+      at handleIncomingPacket (/Users/michalsutowicz/Desktop/dev/apps/fst/node_modules/.pnpm/esbuild@0.14.48/node_modules/esbuild/lib/main.js:763:9)
+      at Socket.readFromStdout (/Users/michalsutowicz/Desktop/dev/apps/fst/node_modules/.pnpm/esbuild@0.14.48/node_modules/esbuild/lib/main.js:632:7)
+      at Socket.emit (node:events:527:28)
+      at Socket.emit (node:domain:475:12)
+      at addChunk (node:internal/streams/readable:315:12)
+      at readableAddChunk (node:internal/streams/readable:289:9)
+      at Socket.Readable.push (node:internal/streams/readable:228:10)
+
+
+ ERROR  Transform failed with 2 errors:
+/Users/michalsutowicz/Desktop/dev/apps/fst/composables/setControls.ts:24:2: ERROR: Cannot use "let" as an identifier here:
+/Users/michalsutowicz/Desktop/dev/apps/fst/composables/setControls.ts:24:6: ERROR: Expected ";" but found "created"
+
+
+ ERROR  4:49:09 PM [vite] Internal server error: Transform failed with 2 errors:
+/Users/michalsutowicz/Desktop/dev/apps/fst/composables/setControls.ts:24:2: ERROR: Cannot use "let" as an identifier here:
+/Users/michalsutowicz/Desktop/dev/apps/fst/composables/setControls.ts:24:6: ERROR: Expected ";" but found "created"
+  Plugin: vite:esbuild
+  File: /Users/michalsutowicz/Desktop/dev/apps/fst/composables/setControls.ts
+  
+  Cannot use "let" as an identifier here:
+  22 |  
+  23 |    // Allow only one instance of Shortcuts
+  24 |    let created = $(useState('shortcutsCreated', () => false))
+     |    ^
+  25 |    if (created)
+  26 |      return
+  
+  Expected ";" but found "created"
+  22 |  
+  23 |    // Allow only one instance of Shortcuts
+  24 |    let created = $(useState('shortcutsCreated', () => false))
+     |        ^
+  25 |    if (created)
+  26 |      return
+  
+      at failureErrorWithLog (/Users/michalsutowicz/Desktop/dev/apps/fst/node_modules/.pnpm/esbuild@0.14.48/node_modules/esbuild/lib/main.js:1605:15)
+      at /Users/michalsutowicz/Desktop/dev/apps/fst/node_modules/.pnpm/esbuild@0.14.48/node_modules/esbuild/lib/main.js:1394:29
+      at /Users/michalsutowicz/Desktop/dev/apps/fst/node_modules/.pnpm/esbuild@0.14.48/node_modules/esbuild/lib/main.js:666:9
+      at handleIncomingPacket (/Users/michalsutowicz/Desktop/dev/apps/fst/node_modules/.pnpm/esbuild@0.14.48/node_modules/esbuild/lib/main.js:763:9)
+      at Socket.readFromStdout (/Users/michalsutowicz/Desktop/dev/apps/fst/node_modules/.pnpm/esbuild@0.14.48/node_modules/esbuild/lib/main.js:632:7)
+      at Socket.emit (node:events:527:28)
+      at Socket.emit (node:domain:475:12)
+      at addChunk (node:internal/streams/readable:315:12)
+      at readableAddChunk (node:internal/streams/readable:289:9)
+      at Socket.Readable.push (node:internal/streams/readable:228:10)
+
+🚀 A new version of Tauri CLI is available! [1.0.5]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 1508ms
+✔ Nitro built in 1430 ms
+[K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 7.89s
+🚀 A new version of Tauri CLI is available! [1.0.5]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    [K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 8.62s
+
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 1849ms
+✔ Nitro built in 2327 ms
+🚀 A new version of Tauri CLI is available! [1.0.5]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    [K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 8.97s
+
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 2607ms
+✔ Nitro built in 2759 ms
+🚀 A new version of Tauri CLI is available! [1.0.5]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    [K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 3.91s
+
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 1296ms
+✔ Nitro built in 1510 ms
+🚀 A new version of Tauri CLI is available! [1.0.5]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 1465ms
+✔ Nitro built in 1522 ms
+[K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 16.13s
+🚀 A new version of Tauri CLI is available! [1.0.5]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 1362ms
+[K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 7.29s
+✔ Nitro built in 1710 ms
+🚀 A new version of Tauri CLI is available! [1.0.5]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[36m    Blocking[0m waiting for file lock on package cache
+[0m[0m[1m[36m    Blocking[0m waiting for file lock on build directory
+
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 1506ms
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+✔ Nitro built in 2064 ms
+     Running BeforeDevCommand (`pnpm dev`)
+[0m[0m[1m[36m    Blocking[0m waiting for file lock on build directory
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3001/ 
+  > Network:  http://192.168.0.146:3001/
+
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    🚀 A new version of Tauri CLI is available! [1.0.5]
+[K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 4.91s
+
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 2319ms
+✔ Nitro built in 2251 ms
+🚀 A new version of Tauri CLI is available! [1.0.5]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.4
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[36m    Blocking[0m waiting for file lock on build directory
+
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 1572ms
+✔ Nitro built in 2063 ms
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/322: app(bin)                    [K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 11.20s
+🚀 A new version of Tauri CLI is available! [1.0.5]
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.6
+        Info Watching /Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri for changes...
+[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 325/326: app(bin)                    
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+ℹ Vite client warmed up in 1495ms
+✔ Nitro built in 2083 ms
+[K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 14.04s
+2022-08-01 23:42:49.920 fst[2083:15371] NSWindow warning: adding an unknown subview: <WKInspectorWKWebView: 0x7fb6eea24090>. Break on NSLog to debug.
+2022-08-01 23:42:49.994 fst[2083:15371] Call stack:
+(
+	0   AppKit                              0x00007ff80c3c6d32 -[NSThemeFrame addSubview:] + 112
+	1   AppKit                              0x00007ff80c3c6a73 -[NSView addSubview:positioned:relativeTo:] + 203
+	2   AppKit                              0x00007ff80c3c6924 -[NSThemeFrame addSubview:positioned:relativeTo:] + 46
+	3   WebKit                              0x00007ff90e3d2cfb _ZN6WebKit19WebInspectorUIProxy14platformAttachEv + 367
+	4   WebKit                              0x00007ff90e5a5dc8 _ZN6WebKit19WebInspectorUIProxy4openEv + 96
+	5   WebKit                              0x00007ff90e802fe1 _ZN6WebKit19WebInspectorUIProxy17didReceiveMessageERN3IPC10ConnectionERNS1_7DecoderE + 237
+	6   WebKit                              0x00007ff90e31b62d _ZN3IPC18MessageReceiverMap15dispatchMessageERNS_10ConnectionERNS_7DecoderE + 367
+	7   WebKit                              0x00007ff90e52a551 _ZN6WebKit15WebProcessProxy17didReceiveMessageERN3IPC10ConnectionERNS1_7DecoderE + 31
+	8   WebKit                              0x00007ff90e30a605 _ZN3IPC10Connection15dispatchMessageENSt3__110unique_ptrINS_7DecoderENS1_14default_deleteIS3_EEEE + 221
+	9   WebKit                              0x00007ff90e309fb3 _ZN3IPC10Connection24dispatchIncomingMessagesEv + 479
+	10  JavaScriptCore                      0x00007ff82223065f _ZN3WTF7RunLoop11performWorkEv + 431
+	11  JavaScriptCore                      0x00007ff82223114a _ZN3WTF7RunLoop11performWorkEPv + 26
+	12  CoreFoundation                      0x00007ff8099681ab __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17
+	13  CoreFoundation                      0x00007ff809968113 __CFRunLoopDoSource0 + 180
+	14  CoreFoundation                      0x00007ff809967e8d __CFRunLoopDoSources0 + 242
+	15  CoreFoundation                      0x00007ff8099668a8 __CFRunLoopRun + 892
+	16  CoreFoundation                      0x00007ff809965e6c CFRunLoopRunSpecific + 562
+	17  HIToolbox                           0x00007ff8126145e6 RunCurrentEventLoopInMode + 292
+	18  HIToolbox                           0x00007ff81261434a ReceiveNextEventCommon + 594
+	19  HIToolbox                           0x00007ff8126140e5 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+	20  AppKit                              0x00007ff80c39ffad _DPSNextEvent + 927
+	21  AppKit                              0x00007ff80c39e66a -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1394
+	22  AppKit                              0x00007ff80c390d19 -[NSApplication run] + 586
+	23  fst                                 0x00000001066fbdd6 _ZN60_$LT$$LP$$RP$$u20$as$u20$objc..message..MessageArguments$GT$6invoke17h16ad1be49b50951fE + 70
+	24  fst                                 0x00000001066cee2c _ZN4objc7message8platform15send_unverified28_$u7b$$u7b$closure$u7d$$u7d$17h82d928e26e3d7e3bE + 44
+	25  fst                                 0x00000001066f93cd _ZN14objc_exception3try28_$u7b$$u7b$closure$u7d$$u7d$17h45c5ae26b077d8acE + 45
+	26  fst                                 0x00000001066f6c85 _ZN14objc_exception10try_no_ret24try_objc_execute_closure17h9eb2d39761d07cb9E + 85
+	27  fst                                 0x00000001067c379e RustObjCExceptionTryCatch + 30
+	28  fst                                 0x00000001066f40f8 _ZN14objc_exception10try_no_ret17h38670b6de10d1026E + 264
+	29  fst                                 0x00000001066f8d03 _ZN14objc_exception3try17hfb3c0dec40975211E + 67
+	30  fst                                 0x00000001066d9f38 _ZN4objc9exception3try17hc560738da4ceccbfE + 40
+	31  fst                                 0x00000001066cc5fd _ZN4objc7message8platform15send_unverified17hf647f81df5471cdcE + 125
+	32  fst                                 0x00000001063ec2f1 _ZN3tao13platform_impl8platform10event_loop18EventLoop$LT$T$GT$10run_return17h86c5b0bd633088c8E + 1345
+	33  fst                                 0x00000001063ed46d _ZN3tao13platform_impl8platform10event_loop18EventLoop$LT$T$GT$3run17h5172fbee31aa60a7E + 61
+	34  fst                                 0x00000001063ad7cc _ZN3tao10event_loop18EventLoop$LT$T$GT$3run17ha194060a287ad973E + 108
+	35  fst                                 0x0000000106154693 _ZN83_$LT$tauri_runtime_wry..Wry$LT$T$GT$$u20$as$u20$tauri_runtime..Runtime$LT$T$GT$$GT$3run17h1260294b60681f73E + 851
+	36  fst                                 0x000000010636d260 _ZN5tauri3app12App$LT$R$GT$3run17hdfba86f24e37fdfbE + 304
+	37  fst                                 0x000000010636d50e _ZN5tauri3app16Builder$LT$R$GT$3run17h34a18acfcc2df901E + 206
+	38  fst                                 0x000000010616576d _ZN3app4main17h6c653629a225f322E + 8973
+	39  fst                                 0x00000001060fc26e _ZN4core3ops8function6FnOnce9call_once17h7aac33ca1a834d5eE + 14
+	40  fst                                 0x00000001060885b1 _ZN3std10sys_common9backtrace28__rust_begin_short_backtrace17hb859f2195974dad2E + 17
+	41  fst                                 0x00000001061627d4 _ZN3std2rt10lang_start28_$u7b$$u7b$closure$u7d$$u7d$17hc6f4e2a930004edbE + 20
+	42  fst                                 0x0000000106a989d7 _ZN3std2rt19lang_start_internal17h660bdfa2fad8559bE + 663
+	43  fst                                 0x00000001061627ae _ZN3std2rt10lang_start17hcd4e1b1527a1ad28E + 46
+	44  fst                                 0x0000000106165a46 main + 22
+	45  dyld                                0x000000011069352e start + 462
+)
+
+> @ app:run /Users/michalsutowicz/Desktop/dev/apps/fst
+> pnpm tauri dev
+
+     Running BeforeDevCommand (`pnpm dev`)
+        Warn Waiting for your frontend dev server to start on http://localhost:3000/...
+
+> @ dev /Users/michalsutowicz/Desktop/dev/apps/fst
+> nuxt dev
+
+[2J[0fNuxt CLI v3.0.0-rc.6
+        Info Watching /Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri for changes...
+
+  > Local:    http://localhost:3000/ 
+  > Network:  http://192.168.0.146:3000/
+
+[0m[0m[1m[32m   Compiling[0m libc v0.2.126
+[0m[0m[1m[32m   Compiling[0m proc-macro2 v1.0.42
+[0m[0m[1m[32m   Compiling[0m unicode-ident v1.0.2
+[0m[0m[1m[32m   Compiling[0m quote v1.0.20
+[0m[0m[1m[32m   Compiling[0m syn v1.0.98
+[0m[0m[1m[32m   Compiling[0m cfg-if v1.0.0
+[0m[0m[1m[32m   Compiling[0m autocfg v1.1.0
+[0m[0m[1m[32m   Compiling[0m serde_derive v1.0.141
+[0m[0m[1m[32m   Compiling[0m serde v1.0.141
+[0m[0m[1m[32m   Compiling[0m ppv-lite86 v0.2.16
+[0m[0m[1m[32m   Compiling[0m siphasher v0.3.10
+[0m[0m[1m[32m   Compiling[0m getrandom v0.1.16
+[0m[0m[1m[36m    Building[0m [                           ] 0/326: unicode-ident, serde(buil...[K[0m[0m[1m[32m   Compiling[0m once_cell v1.13.0
+[0m[0m[1m[36m    Building[0m [                           ] 1/326: unicode-ident, serde(buil...[K[0m[0m[1m[32m   Compiling[0m log v0.4.17
+[0m[0m[1m[36m    Building[0m [                           ] 2/326: serde(build.rs), once_cel...[K[0m[0m[1m[32m   Compiling[0m bitflags v1.3.2
+[0m[0m[1m[36m    Building[0m [                           ] 3/326: serde(build.rs), once_cel...[K[0m[0m[1m[32m   Compiling[0m proc-macro-hack v0.5.19
+[0m[0m[1m[36m    Building[0m [                           ] 4/326: proc-macro-hack(build.rs)...[K[0m[0m[1m[32m   Compiling[0m smallvec v1.9.0
+[0m[0m[1m[36m    Building[0m [                           ] 5/326: proc-macro-hack(build.rs)...
+ WARN  [1m[33m[@vue/reactivity-transform][0m[33m Reactivity transform is an experimental feature.
+Experimental features may change behavior between patch versions.
+It is recommended to pin your vue dependencies to exact versions to avoid breakage.
+You can follow the proposal's status at https://github.com/vuejs/rfcs/discussions/369.[0m
+
+
+[K[0m[0m[1m[32m   Compiling[0m itoa v1.0.2
+[0m[0m[1m[36m    Building[0m [                           ] 6/326: proc-macro-hack(build.rs)...[K[0m[0m[1m[32m   Compiling[0m parking_lot_core v0.9.3
+[0m[0m[1m[36m    Building[0m [                           ] 7/326: proc-macro-hack(build.rs)...[K[0m[0m[1m[32m   Compiling[0m memchr v2.5.0
+[0m[0m[1m[32m   Compiling[0m cc v1.0.73
+[0m[0m[1m[32m   Compiling[0m fnv v1.0.7
+[0m[0m[1m[32m   Compiling[0m matches v0.1.9
+[0m[0m[1m[32m   Compiling[0m new_debug_unreachable v1.0.4
+[0m[0m[1m[32m   Compiling[0m ryu v1.0.10
+[0m[0m[1m[32m   Compiling[0m precomputed-hash v0.1.1
+[0m[0m[1m[36m    Building[0m [>                         ] 14/326: proc-macro-hack(build.rs)...[K[0m[0m[1m[32m   Compiling[0m byteorder v1.4.3
+[0m[0m[1m[36m    Building[0m [>                         ] 15/326: proc-macro-hack(build.rs)...[K[0m[0m[1m[32m   Compiling[0m mac v0.1.1
+[0m[0m[1m[36m    Building[0m [>                         ] 16/326: proc-macro-hack(build.rs)...[K[0m[0m[1m[32m   Compiling[0m utf-8 v0.7.6
+[0m[0m[1m[36m    Building[0m [>                         ] 17/326: proc-macro-hack(build.rs)...[K[0m[0m[1m[32m   Compiling[0m tinyvec_macros v0.1.0
+[0m[0m[1m[36m    Building[0m [>                         ] 18/326: proc-macro-hack(build.rs)...[K[0m[0m[1m[32m   Compiling[0m core-foundation-sys v0.8.3
+[0m[0m[1m[36m    Building[0m [>                         ] 19/326: proc-macro-hack(build.rs)...[K[0m[0m[1m[32m   Compiling[0m ident_case v1.0.1
+[0m[0m[1m[36m    Building[0m [>                         ] 20/326: proc-macro-hack(build.rs)...[K[0m[0m[1m[32m   Compiling[0m dtoa v0.4.8
+[0m[0m[1m[36m    Building[0m [>                         ] 21/326: proc-macro-hack(build.rs)...[K[0m[0m[1m[32m   Compiling[0m percent-encoding v2.1.0
+[0m[0m[1m[36m    Building[0m [>                         ] 22/326: percent-encoding, utf-8, ...[K[0m[0m[1m[32m   Compiling[0m strsim v0.10.0
+[0m[0m[1m[36m    Building[0m [>                         ] 23/326: percent-encoding, utf-8, ...[K[0m[0m[1m[32m   Compiling[0m nodrop v0.1.14
+[0m[0m[1m[36m    Building[0m [>                         ] 24/326: percent-encoding, utf-8, ...[K[0m[0m[1m[32m   Compiling[0m unicode-bidi v0.3.8
+[0m[0m[1m[36m    Building[0m [>                         ] 25/326: percent-encoding, utf-8, ...[K[0m[0m[1m[32m   Compiling[0m semver v1.0.12
+[0m[0m[1m[36m    Building[0m [=>                        ] 26/326: percent-encoding, utf-8, ...[K[0m[0m[1m[32m   Compiling[0m stable_deref_trait v1.2.0
+[0m[0m[1m[36m    Building[0m [=>                        ] 27/326: percent-encoding, utf-8, ...[K[0m[0m[1m[32m   Compiling[0m itoa v0.4.8
+[0m[0m[1m[36m    Building[0m [=>                        ] 28/326: percent-encoding, utf-8, ...[K[0m[0m[1m[32m   Compiling[0m convert_case v0.4.0
+[0m[0m[1m[36m    Building[0m [=>                        ] 29/326: percent-encoding, utf-8, ...[K[0m[0m[1m[32m   Compiling[0m scopeguard v1.1.0
+[0m[0m[1m[36m    Building[0m [=>                        ] 30/326: percent-encoding, dtoa, s...[K[0m[0m[1m[32m   Compiling[0m alloc-no-stdlib v2.0.3
+[0m[0m[1m[36m    Building[0m [=>                        ] 31/326: percent-encoding, alloc-n...[K[0m[0m[1m[32m   Compiling[0m thin-slice v0.1.1
+[0m[0m[1m[36m    Building[0m [=>                        ] 32/326: percent-encoding, thin-sl...[0m[0m[1m[36m    Building[0m [=>                        ] 33/326: percent-encoding, thin-sl...[K[0m[0m[1m[32m   Compiling[0m adler32 v1.2.0
+[0m[0m[1m[36m    Building[0m [=>                        ] 34/326: thin-slice, alloc-no-stdl...[K[0m[0m[1m[32m   Compiling[0m same-file v1.0.6
+[0m[0m[1m[36m    Building[0m [=>                        ] 35/326: thin-slice, alloc-no-stdl...[K[0m[0m[1m[32m   Compiling[0m serde_json v1.0.82
+[0m[0m[1m[36m    Building[0m [=>                        ] 36/326: thin-slice, serde_json(bu...[K[0m[0m[1m[32m   Compiling[0m crc32fast v1.3.2
+[0m[0m[1m[36m    Building[0m [=>                        ] 37/326: thin-slice, serde_json(bu...[0m[0m[1m[36m    Building[0m [==>                       ] 38/326: thin-slice, serde_json(bu...[K[0m[0m[1m[32m   Compiling[0m glob v0.3.0
+[0m[0m[1m[36m    Building[0m [==>                       ] 39/326: thin-slice, serde_json(bu...[K[0m[0m[1m[32m   Compiling[0m block v0.1.6
+[0m[0m[1m[36m    Building[0m [==>                       ] 40/326: serde_json(build.rs), adl...[K[0m[0m[1m[32m   Compiling[0m typenum v1.15.0
+[0m[0m[1m[36m    Building[0m [==>                       ] 41/326: typenum(build.rs), serde_...[K[0m[0m[1m[32m   Compiling[0m adler v1.0.2
+[0m[0m[1m[36m    Building[0m [==>                       ] 42/326: typenum(build.rs), serde_...[K[0m[0m[1m[32m   Compiling[0m version_check v0.9.4
+[0m[0m[1m[36m    Building[0m [==>                       ] 43/326: typenum(build.rs), serde_...[K[0m[0m[1m[32m   Compiling[0m foreign-types-shared v0.1.1
+[0m[0m[1m[36m    Building[0m [==>                       ] 44/326: typenum(build.rs), serde_...[K[0m[0m[1m[32m   Compiling[0m crossbeam-utils v0.8.11
+[0m[0m[1m[36m    Building[0m [==>                       ] 45/326: typenum(build.rs), serde_...[K[0m[0m[1m[32m   Compiling[0m futures-core v0.3.21
+[0m[0m[1m[36m    Building[0m [==>                       ] 46/326: typenum(build.rs), serde_...[K[0m[0m[1m[32m   Compiling[0m heck v0.4.0
+[0m[0m[1m[36m    Building[0m [==>                       ] 47/326: typenum(build.rs), serde_...[K[0m[0m[1m[32m   Compiling[0m bytes v1.2.1
+[0m[0m[1m[36m    Building[0m [==>                       ] 48/326: typenum(build.rs), serde_...[K[0m[0m[1m[32m   Compiling[0m lazy_static v1.4.0
+[0m[0m[1m[36m    Building[0m [==>                       ] 49/326: typenum(build.rs), crossb...[K[0m[0m[1m[32m   Compiling[0m cty v0.2.2
+[0m[0m[1m[36m    Building[0m [==>                       ] 50/326: typenum(build.rs), crossb...[K[0m[0m[1m[32m   Compiling[0m futures-channel v0.3.21
+[0m[0m[1m[36m    Building[0m [===>                      ] 51/326: typenum(build.rs), crossb...[K[0m[0m[1m[32m   Compiling[0m regex-syntax v0.6.27
+[0m[0m[1m[36m    Building[0m [===>                      ] 52/326: typenum(build.rs), crossb...[K[0m[0m[1m[32m   Compiling[0m anyhow v1.0.59
+[0m[0m[1m[36m    Building[0m [===>                      ] 53/326: typenum(build.rs), crossb...[K[0m[0m[1m[32m   Compiling[0m pin-project-lite v0.2.9
+[0m[0m[1m[36m    Building[0m [===>                      ] 54/326: typenum(build.rs), pin-pr...[K[0m[0m[1m[32m   Compiling[0m futures-task v0.3.21
+[0m[0m[1m[36m    Building[0m [===>                      ] 55/326: typenum(build.rs), pin-pr...ℹ Vite client warmed up in 2699ms
+[0m[0m[1m[36m    Building[0m [===>                      ] 56/326: typenum(build.rs), future...[K[0m[0m[1m[32m   Compiling[0m futures-io v0.3.21
+[0m[0m[1m[36m    Building[0m [===>                      ] 57/326: typenum(build.rs), future...[K[0m[0m[1m[32m   Compiling[0m futures-util v0.3.21
+[0m[0m[1m[36m    Building[0m [===>                      ] 58/326: typenum(build.rs), future...[K[0m[0m[1m[32m   Compiling[0m fastrand v1.8.0
+[0m[0m[1m[36m    Building[0m [===>                      ] 59/326: typenum(build.rs), future...[K[0m[0m[1m[32m   Compiling[0m uuid v0.8.2
+[0m[0m[1m[36m    Building[0m [===>                      ] 60/326: typenum(build.rs), future...[K[0m[0m[1m[32m   Compiling[0m dispatch v0.2.0
+[0m[0m[1m[36m    Building[0m [===>                      ] 61/326: typenum(build.rs), dispat...[K[0m[0m[1m[32m   Compiling[0m futures-sink v0.3.21
+[0m[0m[1m[36m    Building[0m [===>                      ] 62/326: typenum(build.rs), dispat...[K[0m[0m[1m[32m   Compiling[0m hashbrown v0.12.3
+[0m[0m[1m[36m    Building[0m [====>                     ] 63/326: typenum(build.rs), dispat...[K[0m[0m[1m[32m   Compiling[0m safemem v0.3.3
+[0m[0m[1m[36m    Building[0m [====>                     ] 64/326: typenum(build.rs), dispat...[K[0m[0m[1m[32m   Compiling[0m remove_dir_all v0.5.3
+[0m[0m[1m[36m    Building[0m [====>                     ] 65/326: dispatch, semver(build.rs...[K[0m[0m[1m[32m   Compiling[0m wry v0.19.0
+[0m[0m[1m[36m    Building[0m [====>                     ] 66/326: dispatch, wry(build.rs), ...[K[0m[0m[1m[32m   Compiling[0m xml-rs v0.8.4
+[0m[0m[1m[36m    Building[0m [====>                     ] 67/326: dispatch, wry(build.rs), ...[K[0m[0m[1m[32m   Compiling[0m native-tls v0.2.10
+[0m[0m[1m[36m    Building[0m [====>                     ] 68/326: dispatch, wry(build.rs), ...[K[0m[0m[1m[32m   Compiling[0m pin-utils v0.1.0
+[0m[0m[1m[36m    Building[0m [====>                     ] 69/326: pin-utils, dispatch, wry(...[K[0m[0m[1m[32m   Compiling[0m cpufeatures v0.2.2
+[0m[0m[1m[36m    Building[0m [====>                     ] 70/326: pin-utils, dispatch, wry(...[K[0m[0m[1m[32m   Compiling[0m base64 v0.13.0
+[0m[0m[1m[36m    Building[0m [====>                     ] 71/326: pin-utils, dispatch, wry(...[K[0m[0m[1m[32m   Compiling[0m http-range v0.1.5
+[0m[0m[1m[36m    Building[0m [====>                     ] 72/326: pin-utils, wry(build.rs),...[K[0m[0m[1m[32m   Compiling[0m wildmatch v2.1.1
+[0m[0m[1m[36m    Building[0m [====>                     ] 73/326: wry(build.rs), cpufeature...[K[0m[0m[1m[32m   Compiling[0m pathdiff v0.2.1
+[0m[0m[1m[36m    Building[0m [====>                     ] 74/326: wry(build.rs), pathdiff, ...[K[0m[0m[1m[32m   Compiling[0m parking v2.0.0
+[0m[0m[1m[36m    Building[0m [====>                     ] 75/326: pathdiff, bytes, native-t...[K[0m[0m[1m[32m   Compiling[0m waker-fn v1.1.0
+[0m[0m[1m[36m    Building[0m [=====>                    ] 76/326: bytes, native-tls(build.r...[K[0m[0m[1m[32m   Compiling[0m state v0.5.3
+[0m[0m[1m[36m    Building[0m [=====>                    ] 77/326: state, bytes, native-tls(...[K[0m[0m[1m[32m   Compiling[0m embed_plist v1.2.2
+[0m[0m[1m[36m    Building[0m [=====>                    ] 78/326: state, bytes, cc, http-ra...[K[0m[0m[1m[32m   Compiling[0m instant v0.1.12
+[0m[0m[1m[36m    Building[0m [=====>                    ] 79/326: state, bytes, instant, cc...[K[0m[0m[1m[32m   Compiling[0m phf_shared v0.8.0
+[0m[0m[1m[36m    Building[0m [=====>                    ] 80/326: state, bytes, instant, cc...[K[0m[0m[1m[32m   Compiling[0m phf_shared v0.10.0
+[0m[0m[1m[36m    Building[0m [=====>                    ] 81/326: state, phf_shared, bytes,...[K[0m[0m[1m[32m   Compiling[0m thread_local v1.1.4
+[0m[0m[1m[36m    Building[0m [=====>                    ] 82/326: state, phf_shared, instan...[0m[0m[1m[36m    Building[0m [=====>                    ] 83/326: state, phf_shared, instan...[0m[0m[1m[36m    Building[0m [=====>                    ] 84/326: state, phf_shared, quote(...[0m[0m[1m[36m    Building[0m [=====>                    ] 85/326: state, phf_shared, quote(...[0m[0m[1m[36m    Building[0m [=====>                    ] 86/326: proc-macro2(build), phf_s...[0m[0m[1m[36m    Building[0m [=====>                    ] 87/326: proc-macro2(build), phf_s...[0m[0m[1m[36m    Building[0m [======>                   ] 88/326: proc-macro2(build), phf_s...[0m[0m[1m[36m    Building[0m [======>                   ] 89/326: proc-macro2(build), phf_s...[0m[0m[1m[36m    Building[0m [======>                   ] 90/326: proc-macro2(build), quote...[K[0m[0m[1m[32m   Compiling[0m lock_api v0.4.7
+[0m[0m[1m[36m    Building[0m [======>                   ] 91/326: proc-macro2(build), lock_...[K[0m[0m[1m[32m   Compiling[0m num-traits v0.2.15
+[0m[0m[1m[36m    Building[0m [======>                   ] 92/326: proc-macro2(build), lock_...[K[0m[0m[1m[32m   Compiling[0m num-integer v0.1.45
+[0m[0m[1m[36m    Building[0m [======>                   ] 93/326: proc-macro2(build), lock_...✔ Nitro built in 3909 ms
+[K[0m[0m[1m[32m   Compiling[0m num-iter v0.1.43
+[0m[0m[1m[36m    Building[0m [======>                   ] 94/326: proc-macro2(build), lock_...[K[0m[0m[1m[32m   Compiling[0m slab v0.4.7
+[0m[0m[1m[36m    Building[0m [======>                   ] 95/326: proc-macro2(build), lock_...[K[0m[0m[1m[32m   Compiling[0m indexmap v1.9.1
+[0m[0m[1m[36m    Building[0m [======>                   ] 96/326: proc-macro2(build), num-i...[K[0m[0m[1m[32m   Compiling[0m tokio v1.20.1
+[0m[0m[1m[36m    Building[0m [======>                   ] 97/326: proc-macro2(build), num-i...[0m[0m[1m[36m    Building[0m [======>                   ] 98/326: proc-macro2(build), proc-...[K[0m[0m[1m[32m   Compiling[0m futf v0.1.5
+[0m[0m[1m[36m    Building[0m [======>                   ] 99/326: proc-macro-hack(build), n...[K[0m[0m[1m[32m   Compiling[0m tinyvec v1.6.0
+[0m[0m[1m[36m    Building[0m [======>                  ] 100/326: proc-macro-hack(build), n...[0m[0m[1m[36m    Building[0m [======>                  ] 101/326: parking_lot_core(build), ...[K[0m[0m[1m[32m   Compiling[0m form_urlencoded v1.0.1
+[0m[0m[1m[36m    Building[0m [======>                  ] 102/326: parking_lot_core(build), ...[K[0m[0m[1m[32m   Compiling[0m dtoa-short v0.3.3
+[0m[0m[1m[36m    Building[0m [======>                  ] 103/326: parking_lot_core(build), ...[0m[0m[1m[36m    Building[0m [======>                  ] 104/326: parking_lot_core(build), ...[0m[0m[1m[36m    Building[0m [=======>                 ] 105/326: parking_lot_core(build), ...[K[0m[0m[1m[32m   Compiling[0m servo_arc v0.1.1
+[0m[0m[1m[36m    Building[0m [=======>                 ] 106/326: parking_lot_core(build), ...[K[0m[0m[1m[32m   Compiling[0m fxhash v0.2.1
+[0m[0m[1m[36m    Building[0m [=======>                 ] 107/326: parking_lot_core(build), ...[K[0m[0m[1m[32m   Compiling[0m alloc-stdlib v0.2.1
+[0m[0m[1m[36m    Building[0m [=======>                 ] 108/326: parking_lot_core(build), ...[K[0m[0m[1m[32m   Compiling[0m deflate v1.0.0
+[0m[0m[1m[36m    Building[0m [=======>                 ] 109/326: parking_lot_core(build), ...[K[0m[0m[1m[32m   Compiling[0m deflate v0.7.20
+[0m[0m[1m[32m   Compiling[0m inflate v0.3.4
+[0m[0m[1m[36m    Building[0m [=======>                 ] 111/326: parking_lot_core(build), ...[K[0m[0m[1m[32m   Compiling[0m walkdir v2.3.2
+[0m[0m[1m[36m    Building[0m [=======>                 ] 112/326: parking_lot_core(build), ...[0m[0m[1m[36m    Building[0m [=======>                 ] 113/326: parking_lot_core(build), ...[K[0m[0m[1m[32m   Compiling[0m miniz_oxide v0.5.3
+[0m[0m[1m[36m    Building[0m [=======>                 ] 114/326: parking_lot_core(build), ...[K[0m[0m[1m[32m   Compiling[0m foreign-types v0.3.2
+[0m[0m[1m[36m    Building[0m [=======>                 ] 115/326: memchr(build), semver(bui...[0m[0m[1m[36m    Building[0m [=======>                 ] 116/326: memchr(build), semver(bui...[0m[0m[1m[36m    Building[0m [=======>                 ] 117/326: semver(build), deflate, i...[0m[0m[1m[36m    Building[0m [========>                ] 118/326: semver(build), deflate, i...[K[0m[0m[1m[32m   Compiling[0m raw-window-handle v0.4.3
+[0m[0m[1m[36m    Building[0m [========>                ] 119/326: semver(build), deflate, i...[0m[0m[1m[36m    Building[0m [========>                ] 120/326: semver(build), deflate, c...[0m[0m[1m[36m    Building[0m [========>                ] 121/326: semver(build), deflate, c...[K[0m[0m[1m[32m   Compiling[0m tauri v1.0.5
+[0m[0m[1m[36m    Building[0m [========>                ] 122/326: semver(build), deflate, c...[0m[0m[1m[36m    Building[0m [========>                ] 123/326: futures-channel(build), d...[K[0m[0m[1m[32m   Compiling[0m generic-array v0.14.5
+[0m[0m[1m[36m    Building[0m [========>                ] 124/326: generic-array(build.rs), ...[0m[0m[1m[36m    Building[0m [========>                ] 125/326: generic-array(build.rs), ...[0m[0m[1m[36m    Building[0m [========>                ] 126/326: generic-array(build.rs), ...[0m[0m[1m[36m    Building[0m [========>                ] 127/326: futures-channel(build), d...[0m[0m[1m[36m    Building[0m [========>                ] 128/326: futures-channel(build), d...[K[0m[0m[1m[32m   Compiling[0m line-wrap v0.1.1
+[0m[0m[1m[36m    Building[0m [========>                ] 129/326: futures-channel(build), d...[0m[0m[1m[36m    Building[0m [========>                ] 130/326: semver(build), futures-ch...[K[0m[0m[1m[32m   Compiling[0m http v0.2.8
+[0m[0m[1m[36m    Building[0m [=========>               ] 131/326: semver(build), http, futu...[K[0m[0m[1m[32m   Compiling[0m cfb v0.6.1
+[0m[0m[1m[36m    Building[0m [=========>               ] 132/326: semver(build), http, cfb,...[0m[0m[1m[36m    Building[0m [=========>               ] 133/326: semver(build), http, cfb,...[K[0m[0m[1m[32m   Compiling[0m open v3.0.2
+[0m[0m[1m[36m    Building[0m [=========>               ] 134/326: semver(build), http, cfb,...[0m[0m[1m[36m    Building[0m [=========>               ] 135/326: semver(build), http, cfb,...[0m[0m[1m[36m    Building[0m [=========>               ] 136/326: semver(build), http, cfb,...[K[0m[0m[1m[32m   Compiling[0m objc_exception v0.1.2
+[0m[0m[1m[36m    Building[0m [=========>               ] 137/326: semver(build), http, cfb,...[K[0m[0m[1m[32m   Compiling[0m tao v0.12.2
+[0m[0m[1m[36m    Building[0m [=========>               ] 138/326: semver(build), http, cfb,...[K[0m[0m[1m[32m   Compiling[0m mac-notification-sys v0.5.5
+[0m[0m[1m[36m    Building[0m [=========>               ] 139/326: semver(build), http, cfb,...[0m[0m[1m[36m    Building[0m [=========>               ] 140/326: semver(build), http, cfb,...[0m[0m[1m[36m    Building[0m [=========>               ] 141/326: semver(build), http, cfb,...[0m[0m[1m[36m    Building[0m [=========>               ] 142/326: semver(build), http, cfb,...[0m[0m[1m[36m    Building[0m [=========>               ] 143/326: semver(build), http, cfb,...[0m[0m[1m[36m    Building[0m [==========>              ] 144/326: semver(build), http, cfb,...[0m[0m[1m[36m    Building[0m [==========>              ] 145/326: semver(build), http, cfb,...[0m[0m[1m[36m    Building[0m [==========>              ] 146/326: http, cfb, lock_api(build...[K[0m[0m[1m[32m   Compiling[0m tendril v0.4.3
+[0m[0m[1m[36m    Building[0m [==========>              ] 147/326: http, cfb, lock_api(build...[0m[0m[1m[36m    Building[0m [==========>              ] 148/326: http, cfb, lock_api(build...[0m[0m[1m[36m    Building[0m [==========>              ] 149/326: http, cfb, lock_api(build...[K[0m[0m[1m[32m   Compiling[0m brotli-decompressor v2.3.2
+[0m[0m[1m[36m    Building[0m [==========>              ] 150/326: http, cfb, lock_api(build...[0m[0m[1m[36m    Building[0m [==========>              ] 151/326: proc-macro-hack, http, cf...[0m[0m[1m[36m    Building[0m [==========>              ] 152/326: proc-macro-hack, http, nu...[0m[0m[1m[36m    Building[0m [==========>              ] 153/326: proc-macro-hack, http, pr...[0m[0m[1m[36m    Building[0m [==========>              ] 154/326: proc-macro-hack, http, pr...[K[0m[0m[1m[32m   Compiling[0m unicode-normalization v0.1.21
+[0m[0m[1m[36m    Building[0m [==========>              ] 155/326: proc-macro-hack, http, pr...[0m[0m[1m[36m    Building[0m [==========>              ] 156/326: proc-macro-hack, http, cr...[0m[0m[1m[36m    Building[0m [===========>             ] 157/326: proc-macro-hack, http, cr...[0m[0m[1m[36m    Building[0m [===========>             ] 158/326: proc-macro-hack, http, cr...[0m[0m[1m[36m    Building[0m [===========>             ] 159/326: proc-macro-hack, crc32fas...[0m[0m[1m[36m    Building[0m [===========>             ] 160/326: proc-macro-hack, crossbea...[0m[0m[1m[36m    Building[0m [===========>             ] 161/326: proc-macro-hack, crossbea...[0m[0m[1m[36m    Building[0m [===========>             ] 162/326: proc-macro-hack, crossbea...[0m[0m[1m[36m    Building[0m [===========>             ] 163/326: proc-macro-hack, crossbea...[0m[0m[1m[36m    Building[0m [===========>             ] 164/326: proc-macro-hack, crossbea...[0m[0m[1m[36m    Building[0m [===========>             ] 165/326: proc-macro-hack, crossbea...[0m[0m[1m[36m    Building[0m [===========>             ] 166/326: proc-macro-hack, crossbea...[K[0m[0m[1m[32m   Compiling[0m infer v0.7.0
+[0m[0m[1m[36m    Building[0m [===========>             ] 167/326: proc-macro-hack, crossbea...[0m[0m[1m[36m    Building[0m [===========>             ] 168/326: proc-macro-hack, crossbea...[K[0m[0m[1m[32m   Compiling[0m getrandom v0.2.7
+[0m[0m[1m[36m    Building[0m [===========>             ] 169/326: proc-macro-hack, crossbea...[0m[0m[1m[36m    Building[0m [============>            ] 170/326: proc-macro-hack, crossbea...[K[0m[0m[1m[32m   Compiling[0m malloc_buf v0.0.6
+[0m[0m[1m[36m    Building[0m [============>            ] 171/326: proc-macro-hack, crossbea...[K[0m[0m[1m[32m   Compiling[0m num_threads v0.1.6
+[0m[0m[1m[36m    Building[0m [============>            ] 172/326: crossbeam-utils, anyhow, ...[K[0m[0m[1m[32m   Compiling[0m dirs-sys-next v0.1.2
+[0m[0m[1m[36m    Building[0m [============>            ] 173/326: crossbeam-utils, tao(buil...[K[0m[0m[1m[32m   Compiling[0m tempfile v3.3.0
+[0m[0m[1m[36m    Building[0m [============>            ] 174/326: crossbeam-utils, tao(buil...[K[0m[0m[1m[32m   Compiling[0m filetime v0.2.17
+[0m[0m[1m[36m    Building[0m [============>            ] 175/326: filetime, tao(build), mac...[K[0m[0m[1m[32m   Compiling[0m num_cpus v1.13.1
+[0m[0m[1m[36m    Building[0m [============>            ] 176/326: filetime, tao(build), mac...[K[0m[0m[1m[32m   Compiling[0m xattr v0.2.3
+[0m[0m[1m[36m    Building[0m [============>            ] 177/326: xattr, filetime, tao(buil...[K[0m[0m[1m[32m   Compiling[0m shared_child v1.0.0
+[0m[0m[1m[36m    Building[0m [============>            ] 178/326: xattr, filetime, tao(buil...[K[0m[0m[1m[32m   Compiling[0m os_pipe v1.0.1
+[0m[0m[1m[36m    Building[0m [============>            ] 179/326: xattr, filetime, tao(buil...[0m[0m[1m[36m    Building[0m [============>            ] 180/326: xattr, filetime, tao(buil...[0m[0m[1m[36m    Building[0m [============>            ] 181/326: xattr, lock_api, tao(buil...[0m[0m[1m[36m    Building[0m [============>            ] 182/326: xattr, lock_api, tao(buil...[0m[0m[1m[36m    Building[0m [=============>           ] 183/326: xattr, lock_api, tao(buil...[K[0m[0m[1m[32m   Compiling[0m core-foundation v0.9.3
+[0m[0m[1m[36m    Building[0m [=============>           ] 184/326: xattr, lock_api, tao(buil...[K[0m[0m[1m[32m   Compiling[0m security-framework-sys v2.6.1
+[0m[0m[1m[36m    Building[0m [=============>           ] 185/326: lock_api, security-framew...[0m[0m[1m[36m    Building[0m [=============>           ] 186/326: lock_api, security-framew...[K[0m[0m[1m[32m   Compiling[0m png v0.17.5
+[0m[0m[1m[36m    Building[0m [=============>           ] 187/326: lock_api, security-framew...[K[0m[0m[1m[32m   Compiling[0m flate2 v1.0.24
+[0m[0m[1m[36m    Building[0m [=============>           ] 188/326: lock_api, security-framew...[K[0m[0m[1m[32m   Compiling[0m rustc_version v0.4.0
+[0m[0m[1m[36m    Building[0m [=============>           ] 189/326: security-framework-sys, t...[0m[0m[1m[36m    Building[0m [=============>           ] 190/326: security-framework-sys, t...[0m[0m[1m[36m    Building[0m [=============>           ] 191/326: tao(build), mac-notificat...[K[0m[0m[1m[32m   Compiling[0m aho-corasick v0.7.18
+[0m[0m[1m[36m    Building[0m [=============>           ] 192/326: aho-corasick, tao(build),...[K[0m[0m[1m[32m   Compiling[0m bstr v0.2.17
+[0m[0m[1m[36m    Building[0m [=============>           ] 193/326: aho-corasick, tao(build),...[K[0m[0m[1m[32m   Compiling[0m futures-lite v1.12.0
+[0m[0m[1m[36m    Building[0m [=============>           ] 194/326: aho-corasick, tao(build),...[K[0m[0m[1m[32m   Compiling[0m crossbeam-channel v0.5.6
+[0m[0m[1m[36m    Building[0m [=============>           ] 195/326: aho-corasick, crossbeam-c...[K[0m[0m[1m[32m   Compiling[0m idna v0.2.3
+[0m[0m[1m[36m    Building[0m [==============>          ] 196/326: aho-corasick, crossbeam-c...[K[0m[0m[1m[32m   Compiling[0m rand_core v0.5.1
+[0m[0m[1m[36m    Building[0m [==============>          ] 197/326: aho-corasick, crossbeam-c...[K[0m[0m[1m[32m   Compiling[0m brotli v3.3.4
+[0m[0m[1m[36m    Building[0m [==============>          ] 198/326: aho-corasick, crossbeam-c...[K[0m[0m[1m[32m   Compiling[0m rand_core v0.6.3
+[0m[0m[1m[36m    Building[0m [==============>          ] 199/326: aho-corasick, crossbeam-c...[K[0m[0m[1m[32m   Compiling[0m uuid v1.1.2
+[0m[0m[1m[36m    Building[0m [==============>          ] 200/326: aho-corasick, crossbeam-c...[K[0m[0m[1m[32m   Compiling[0m time v0.3.12
+[0m[0m[1m[36m    Building[0m [==============>          ] 201/326: aho-corasick, crossbeam-c...[0m[0m[1m[36m    Building[0m [==============>          ] 202/326: aho-corasick, idna, tao(b...[K[0m[0m[1m[32m   Compiling[0m dirs-next v2.0.0
+[0m[0m[1m[36m    Building[0m [==============>          ] 203/326: aho-corasick, idna, tao(b...[0m[0m[1m[36m    Building[0m [==============>          ] 204/326: aho-corasick, tokio, idna...[0m[0m[1m[36m    Building[0m [==============>          ] 205/326: aho-corasick, tokio, idna...[K[0m[0m[1m[32m   Compiling[0m tar v0.4.38
+[0m[0m[1m[36m    Building[0m [==============>          ] 206/326: aho-corasick, tokio, idna...[0m[0m[1m[36m    Building[0m [==============>          ] 207/326: aho-corasick, tokio, idna...[K[0m[0m[1m[32m   Compiling[0m parking_lot v0.12.1
+[0m[0m[1m[36m    Building[0m [==============>          ] 208/326: aho-corasick, tokio, tao(...[0m[0m[1m[36m    Building[0m [===============>         ] 209/326: tokio, tao(build), mac-no...[K[0m[0m[1m[32m   Compiling[0m core-graphics-types v0.1.1
+[0m[0m[1m[36m    Building[0m [===============>         ] 210/326: tokio, tao(build), mac-no...[K[0m[0m[1m[32m   Compiling[0m security-framework v2.6.1
+[0m[0m[1m[36m    Building[0m [===============>         ] 211/326: tokio, security-framework...[K[0m[0m[1m[32m   Compiling[0m rand_chacha v0.2.2
+[0m[0m[1m[36m    Building[0m [===============>         ] 212/326: tokio, security-framework...[K[0m[0m[1m[32m   Compiling[0m rand_pcg v0.2.1
+[0m[0m[1m[36m    Building[0m [===============>         ] 213/326: tokio, security-framework...[K[0m[0m[1m[32m   Compiling[0m regex v1.6.0
+[0m[0m[1m[36m    Building[0m [===============>         ] 214/326: tokio, security-framework...[K[0m[0m[1m[32m   Compiling[0m rand_chacha v0.3.1
+[0m[0m[1m[36m    Building[0m [===============>         ] 215/326: tokio, security-framework...[0m[0m[1m[36m    Building[0m [===============>         ] 216/326: tokio, security-framework...[K[0m[0m[1m[32m   Compiling[0m crypto-common v0.1.6
+[0m[0m[1m[36m    Building[0m [===============>         ] 217/326: tokio, security-framework...[K[0m[0m[1m[32m   Compiling[0m block-buffer v0.10.2
+[0m[0m[1m[36m    Building[0m [===============>         ] 218/326: tokio, security-framework...[K[0m[0m[1m[32m   Compiling[0m core-graphics v0.22.3
+[0m[0m[1m[36m    Building[0m [===============>         ] 219/326: tokio, security-framework...[K[0m[0m[1m[32m   Compiling[0m rand v0.7.3
+[0m[0m[1m[36m    Building[0m [===============>         ] 220/326: rand, tokio, security-fra...[K[0m[0m[1m[32m   Compiling[0m rand v0.8.5
+[0m[0m[1m[36m    Building[0m [===============>         ] 221/326: rand, tokio, security-fra...[0m[0m[1m[36m    Building[0m [================>        ] 222/326: rand, tokio, security-fra...[0m[0m[1m[36m    Building[0m [================>        ] 223/326: rand, tokio, security-fra...[0m[0m[1m[36m    Building[0m [================>        ] 224/326: rand, tokio, security-fra...[K[0m[0m[1m[32m   Compiling[0m digest v0.10.3
+[0m[0m[1m[36m    Building[0m [================>        ] 225/326: rand, tokio, security-fra...[0m[0m[1m[36m    Building[0m [================>        ] 226/326: rand, tokio, security-fra...[K[0m[0m[1m[32m   Compiling[0m objc v0.2.7
+[0m[0m[1m[36m    Building[0m [================>        ] 227/326: rand, tokio, security-fra...[K[0m[0m[1m[32m   Compiling[0m globset v0.4.9
+[0m[0m[1m[36m    Building[0m [================>        ] 228/326: rand, tokio, security-fra...[K[0m[0m[1m[32m   Compiling[0m png v0.11.0
+[0m[0m[1m[36m    Building[0m [================>        ] 229/326: rand, tokio, security-fra...[K[0m[0m[1m[32m   Compiling[0m sha2 v0.10.2
+[0m[0m[1m[36m    Building[0m [================>        ] 230/326: rand, tokio, security-fra...[K[0m[0m[1m[32m   Compiling[0m objc_id v0.1.1
+[0m[0m[1m[36m    Building[0m [================>        ] 231/326: rand, tokio, objc, rand, ...[K[0m[0m[1m[32m   Compiling[0m cocoa-foundation v0.1.0
+[0m[0m[1m[36m    Building[0m [================>        ] 232/326: rand, tokio, cocoa-founda...[K[0m[0m[1m[32m   Compiling[0m phf_generator v0.10.0
+[0m[0m[1m[36m    Building[0m [================>        ] 233/326: rand, tokio, cocoa-founda...[K[0m[0m[1m[32m   Compiling[0m phf_generator v0.8.0
+[0m[0m[1m[36m    Building[0m [================>        ] 234/326: rand, tokio, cocoa-founda...[K[0m[0m[1m[32m   Compiling[0m ignore v0.4.18
+[0m[0m[1m[36m    Building[0m [=================>       ] 235/326: rand, tokio, cocoa-founda...[K[0m[0m[1m[32m   Compiling[0m ico v0.1.0
+[0m[0m[1m[36m    Building[0m [=================>       ] 236/326: rand, tokio, cocoa-founda...[K[0m[0m[1m[32m   Compiling[0m objc-foundation v0.1.1
+[0m[0m[1m[36m    Building[0m [=================>       ] 237/326: rand, tokio, cocoa-founda...[K[0m[0m[1m[32m   Compiling[0m string_cache_codegen v0.5.2
+[0m[0m[1m[36m    Building[0m [=================>       ] 238/326: tokio, cocoa-foundation, ...[K[0m[0m[1m[32m   Compiling[0m phf_codegen v0.8.0
+[0m[0m[1m[36m    Building[0m [=================>       ] 239/326: tokio, cocoa-foundation, ...[0m[0m[1m[36m    Building[0m [=================>       ] 240/326: tokio, cocoa-foundation, ...[K[0m[0m[1m[32m   Compiling[0m selectors v0.22.0
+[0m[0m[1m[36m    Building[0m [=================>       ] 241/326: selectors(build.rs), toki...[0m[0m[1m[36m    Building[0m [=================>       ] 242/326: selectors(build.rs), toki...[K[0m[0m[1m[32m   Compiling[0m notify-rust v4.5.8
+[0m[0m[1m[36m    Building[0m [=================>       ] 243/326: selectors(build.rs), toki...[K[0m[0m[1m[32m   Compiling[0m cocoa v0.24.0
+[0m[0m[1m[36m    Building[0m [=================>       ] 244/326: selectors(build.rs), toki...[K[0m[0m[1m[32m   Compiling[0m markup5ever v0.10.1
+[0m[0m[1m[36m    Building[0m [=================>       ] 245/326: tokio, cocoa-foundation, ...[0m[0m[1m[36m    Building[0m [=================>       ] 246/326: tokio, cocoa-foundation, ...[0m[0m[1m[36m    Building[0m [=================>       ] 247/326: tokio, cocoa-foundation, ...[0m[0m[1m[36m    Building[0m [==================>      ] 248/326: tokio, cocoa-foundation, ...[0m[0m[1m[36m    Building[0m [==================>      ] 249/326: tokio, cocoa-foundation, ...[0m[0m[1m[36m    Building[0m [==================>      ] 250/326: tokio, cocoa-foundation, ...[0m[0m[1m[36m    Building[0m [==================>      ] 251/326: tokio, ignore, syn, marku...[K[0m[0m[1m[32m   Compiling[0m darling_core v0.13.4
+[0m[0m[1m[36m    Building[0m [==================>      ] 251/326: darling_core, tokio, igno...[0m[0m[1m[36m    Building[0m [==================>      ] 252/326: darling_core, tokio, igno...[0m[0m[1m[36m    Building[0m [==================>      ] 253/326: darling_core, tokio, syn,...[0m[0m[1m[36m    Building[0m [==================>      ] 254/326: darling_core, syn, markup...[0m[0m[1m[36m    Building[0m [==================>      ] 255/326: darling_core, syn, markup...[0m[0m[1m[36m    Building[0m [==================>      ] 256/326: darling_core, syn, cocoa    [K[0m[0m[1m[32m   Compiling[0m phf_macros v0.8.0
+[0m[0m[1m[32m   Compiling[0m html5ever v0.25.2
+[0m[0m[1m[32m   Compiling[0m cssparser v0.27.2
+[0m[0m[1m[32m   Compiling[0m cssparser-macros v0.6.0
+[0m[0m[1m[32m   Compiling[0m derive_more v0.99.17
+[0m[0m[1m[32m   Compiling[0m thiserror-impl v1.0.31
+[0m[0m[1m[36m    Building[0m [==================>      ] 257/326: darling_core, cssparser(b...[K[0m[0m[1m[32m   Compiling[0m phf_macros v0.10.0
+[0m[0m[1m[36m    Building[0m [==================>      ] 257/326: darling_core, phf_macros,...[K[0m[0m[1m[32m   Compiling[0m ctor v0.1.23
+[0m[0m[1m[36m    Building[0m [==================>      ] 257/326: darling_core, phf_macros,...[K[0m[0m[1m[32m   Compiling[0m futures-macro v0.3.21
+[0m[0m[1m[36m    Building[0m [==================>      ] 258/326: darling_core, phf_macros,...[K[0m[0m[1m[32m   Compiling[0m serialize-to-javascript-impl v0.1.1
+[0m[0m[1m[36m    Building[0m [==================>      ] 258/326: darling_core, phf_macros,...[K[0m[0m[1m[32m   Compiling[0m serde_repr v0.1.8
+[0m[0m[1m[36m    Building[0m [==================>      ] 259/326: darling_core, phf_macros,...[0m[0m[1m[36m    Building[0m [==================>      ] 260/326: darling_core, phf_macros,...[K[0m[0m[1m[32m   Compiling[0m phf v0.8.0
+[0m[0m[1m[36m    Building[0m [===================>     ] 261/326: darling_core, phf_macros,...[K[0m[0m[1m[32m   Compiling[0m darling_macro v0.13.4
+[0m[0m[1m[36m    Building[0m [===================>     ] 262/326: darling_macro, phf_macros...[K[0m[0m[1m[32m   Compiling[0m phf v0.10.1
+[0m[0m[1m[36m    Building[0m [===================>     ] 263/326: darling_macro, phf, csspa...[0m[0m[1m[36m    Building[0m [===================>     ] 264/326: darling_macro, phf, csspa...[0m[0m[1m[36m    Building[0m [===================>     ] 265/326: darling_macro, phf, csspa...[0m[0m[1m[36m    Building[0m [===================>     ] 266/326: darling_macro, phf, csspa...[0m[0m[1m[36m    Building[0m [===================>     ] 267/326: darling_macro, cssparser(...[K[0m[0m[1m[32m   Compiling[0m darling v0.13.4
+[0m[0m[1m[36m    Building[0m [===================>     ] 268/326: cssparser(build.rs), futu...[K[0m[0m[1m[32m   Compiling[0m serde_with_macros v1.5.2
+[0m[0m[1m[36m    Building[0m [===================>     ] 269/326: cssparser(build.rs), futu...[0m[0m[1m[36m    Building[0m [===================>     ] 270/326: cssparser(build.rs), futu...[K[0m[0m[1m[32m   Compiling[0m thiserror v1.0.31
+[0m[0m[1m[36m    Building[0m [===================>     ] 271/326: cssparser(build.rs), futu...[0m[0m[1m[36m    Building[0m [===================>     ] 272/326: cssparser(build.rs), futu...[0m[0m[1m[36m    Building[0m [===================>     ] 273/326: cssparser(build.rs), futu...[0m[0m[1m[36m    Building[0m [====================>    ] 274/326: futures-util, serde_with_...[0m[0m[1m[36m    Building[0m [====================>    ] 275/326: futures-util, serde_with_...[0m[0m[1m[36m    Building[0m [====================>    ] 276/326: futures-util, cssparser(b...[0m[0m[1m[36m    Building[0m [====================>    ] 277/326: cssparser, futures-util, ...[0m[0m[1m[36m    Building[0m [====================>    ] 278/326: cssparser, futures-util, ...[0m[0m[1m[36m    Building[0m [====================>    ] 279/326: cssparser, futures-util, ...[0m[0m[1m[36m    Building[0m [====================>    ] 280/326: futures-util, serde, sele...[K[0m[0m[1m[32m   Compiling[0m futures-executor v0.3.21
+[0m[0m[1m[36m    Building[0m [====================>    ] 280/326: futures-util, serde, sele...[0m[0m[1m[36m    Building[0m [====================>    ] 281/326: serde, selectors, futures...[K[0m[0m[1m[32m   Compiling[0m futures v0.3.21
+[0m[0m[1m[36m    Building[0m [====================>    ] 281/326: serde, futures, selectors...[0m[0m[1m[36m    Building[0m [====================>    ] 282/326: serde, futures, futures-e...[0m[0m[1m[36m    Building[0m [====================>    ] 283/326: serde, futures              [0m[0m[1m[36m    Building[0m [====================>    ] 284/326: serde                       [K[0m[0m[1m[32m   Compiling[0m url v2.2.2
+[0m[0m[1m[32m   Compiling[0m string_cache v0.8.4
+[0m[0m[1m[32m   Compiling[0m serde_with v1.14.0
+[0m[0m[1m[32m   Compiling[0m toml v0.5.9
+[0m[0m[1m[32m   Compiling[0m plist v1.3.1
+[0m[0m[1m[32m   Compiling[0m serde_urlencoded v0.7.1
+[0m[0m[1m[36m    Building[0m [====================>    ] 284/326: tao, serde_urlencoded, ur...[K[0m[0m[1m[32m   Compiling[0m os_info v3.5.0
+[0m[0m[1m[36m    Building[0m [====================>    ] 285/326: tao, serde_urlencoded, os...[0m[0m[1m[36m    Building[0m [====================>    ] 286/326: tao, serde_urlencoded, os...[0m[0m[1m[36m    Building[0m [=====================>   ] 287/326: tao, serde_urlencoded, os...[0m[0m[1m[36m    Building[0m [=====================>   ] 288/326: tao, os_info, url, markup...[0m[0m[1m[36m    Building[0m [=====================>   ] 289/326: tao, os_info, url, markup...[0m[0m[1m[36m    Building[0m [=====================>   ] 290/326: tao, url, markup5ever, ma...[0m[0m[1m[36m    Building[0m [=====================>   ] 291/326: tao, markup5ever, markup5...[0m[0m[1m[36m    Building[0m [=====================>   ] 292/326: tao, markup5ever, markup5...[K[0m[0m[1m[32m   Compiling[0m treediff v3.0.2
+[0m[0m[1m[36m    Building[0m [=====================>   ] 292/326: tao, markup5ever, markup5...[K[0m[0m[1m[32m   Compiling[0m embed-resource v1.7.2
+[0m[0m[1m[32m   Compiling[0m cargo_toml v0.11.5
+[0m[0m[1m[36m    Building[0m [=====================>   ] 292/326: tao, markup5ever, markup5...[K[0m[0m[1m[32m   Compiling[0m serialize-to-javascript v0.1.1
+[0m[0m[1m[36m    Building[0m [=====================>   ] 292/326: tao, markup5ever, markup5...[K[0m[0m[1m[32m   Compiling[0m attohttpc v0.19.1
+[0m[0m[1m[36m    Building[0m [=====================>   ] 293/326: tao, markup5ever, markup5...[0m[0m[1m[36m    Building[0m [=====================>   ] 294/326: tao, markup5ever, markup5...[0m[0m[1m[36m    Building[0m [=====================>   ] 295/326: tao, markup5ever, markup5...[K[0m[0m[1m[32m   Compiling[0m json-patch v0.2.6
+[0m[0m[1m[36m    Building[0m [=====================>   ] 296/326: tao, markup5ever, markup5...[0m[0m[1m[36m    Building[0m [=====================>   ] 297/326: tao, json-patch, markup5e...[0m[0m[1m[36m    Building[0m [=====================>   ] 298/326: tao, json-patch, html5eve...[0m[0m[1m[36m    Building[0m [=====================>   ] 299/326: tao, json-patch, html5eve...[0m[0m[1m[36m    Building[0m [======================>  ] 300/326: tao, json-patch, html5eve...[K[0m[0m[1m[32m   Compiling[0m rfd v0.9.1
+[0m[0m[1m[36m    Building[0m [======================>  ] 301/326: tao, json-patch, html5eve...[0m[0m[1m[36m    Building[0m [======================>  ] 302/326: tao, json-patch, html5eve...[0m[0m[1m[36m    Building[0m [======================>  ] 303/326: tao, json-patch, html5eve...[0m[0m[1m[36m    Building[0m [======================>  ] 304/326: tao, json-patch, html5eve...[K[0m[0m[1m[32m   Compiling[0m kuchiki v0.8.1
+[0m[0m[1m[36m    Building[0m [======================>  ] 304/326: tao, json-patch, html5eve...[0m[0m[1m[36m    Building[0m [======================>  ] 305/326: tao, json-patch, html5eve...[0m[0m[1m[36m    Building[0m [======================>  ] 306/326: tao, html5ever, attohttpc...[0m[0m[1m[36m    Building[0m [======================>  ] 307/326: tao, rfd, html5ever, atto...[0m[0m[1m[36m    Building[0m [======================>  ] 308/326: tao, rfd, attohttpc, html...[0m[0m[1m[36m    Building[0m [======================>  ] 309/326: tao, rfd, attohttpc, kuch...[0m[0m[1m[36m    Building[0m [======================>  ] 310/326: tao, rfd, kuchiki, kuchiki  [K[0m[0m[1m[32m   Compiling[0m tauri-utils v1.0.3
+[0m[0m[1m[36m    Building[0m [======================>  ] 310/326: tao, rfd, tauri-utils, ku...[0m[0m[1m[36m    Building[0m [======================>  ] 310/326: tao, rfd, tauri-utils, ta...[0m[0m[1m[36m    Building[0m [======================>  ] 311/326: tao, rfd, tauri-utils, ta...[0m[0m[1m[36m    Building[0m [======================>  ] 312/326: tao, rfd, tauri-utils, ta...[0m[0m[1m[36m    Building[0m [======================>  ] 312/326: tao, wry, rfd, tauri-util...[0m[0m[1m[36m    Building[0m [=======================> ] 313/326: tao, wry, tauri-utils, ta...[0m[0m[1m[36m    Building[0m [=======================> ] 314/326: wry, tauri-utils, tauri-u...[0m[0m[1m[36m    Building[0m [=======================> ] 315/326: tauri-utils, tauri-utils    [K[0m[0m[1m[32m   Compiling[0m tauri-runtime v0.10.2
+[0m[0m[1m[36m    Building[0m [=======================> ] 315/326: tauri-utils, tauri-utils,...[K[0m[0m[1m[32m   Compiling[0m tauri-codegen v1.0.4
+[0m[0m[1m[32m   Compiling[0m tauri-build v1.0.4
+[0m[0m[1m[36m    Building[0m [=======================> ] 315/326: tauri-build, tauri-utils,...[K[0m[0m[1m[32m   Compiling[0m tauri-runtime-wry v0.10.2
+[0m[0m[1m[36m    Building[0m [=======================> ] 315/326: tauri-build, tauri-utils,...[0m[0m[1m[36m    Building[0m [=======================> ] 316/326: tauri-build, tauri-utils,...[0m[0m[1m[36m    Building[0m [=======================> ] 317/326: tauri-build, tauri-utils,...[0m[0m[1m[36m    Building[0m [=======================> ] 318/326: tauri-build, tauri-utils,...[0m[0m[1m[36m    Building[0m [=======================> ] 319/326: tauri-build, tauri-codegen  [K[0m[0m[1m[32m   Compiling[0m app v0.1.0 (/Users/michalsutowicz/Desktop/dev/apps/fst/src-tauri)
+[0m[0m[1m[36m    Building[0m [=======================> ] 320/326: tauri-codegen, app(build.rs)[K[0m[0m[1m[32m   Compiling[0m tauri-macros v1.0.4
+[0m[0m[1m[36m    Building[0m [=======================> ] 321/326: tauri-macros, app(build.rs) [0m[0m[1m[36m    Building[0m [=======================> ] 322/326: tauri-macros, app(build)    [0m[0m[1m[36m    Building[0m [=======================> ] 323/326: tauri-macros                [0m[0m[1m[36m    Building[0m [=======================> ] 324/326: tauri                       [0m[0m[1m[36m    Building[0m [=======================> ] 325/326: app(bin)                    [K[0m[0m[1m[32m    Finished[0m dev [unoptimized + debuginfo] target(s) in 1m 05s
+2022-08-03 17:27:30.608 fst[26327:827411] NSWindow warning: adding an unknown subview: <WKInspectorWKWebView: 0x7fc7d3ca5920>. Break on NSLog to debug.
+2022-08-03 17:27:30.662 fst[26327:827411] Call stack:
+(
+	0   AppKit                              0x00007ff80c3c6d32 -[NSThemeFrame addSubview:] + 112
+	1   AppKit                              0x00007ff80c3c6a73 -[NSView addSubview:positioned:relativeTo:] + 203
+	2   AppKit                              0x00007ff80c3c6924 -[NSThemeFrame addSubview:positioned:relativeTo:] + 46
+	3   WebKit                              0x00007ff90e3d2cfb _ZN6WebKit19WebInspectorUIProxy14platformAttachEv + 367
+	4   WebKit                              0x00007ff90e5a5dc8 _ZN6WebKit19WebInspectorUIProxy4openEv + 96
+	5   WebKit                              0x00007ff90e802fe1 _ZN6WebKit19WebInspectorUIProxy17didReceiveMessageERN3IPC10ConnectionERNS1_7DecoderE + 237
+	6   WebKit                              0x00007ff90e31b62d _ZN3IPC18MessageReceiverMap15dispatchMessageERNS_10ConnectionERNS_7DecoderE + 367
+	7   WebKit                              0x00007ff90e52a551 _ZN6WebKit15WebProcessProxy17didReceiveMessageERN3IPC10ConnectionERNS1_7DecoderE + 31
+	8   WebKit                              0x00007ff90e30a605 _ZN3IPC10Connection15dispatchMessageENSt3__110unique_ptrINS_7DecoderENS1_14default_deleteIS3_EEEE + 221
+	9   WebKit                              0x00007ff90e309fb3 _ZN3IPC10Connection24dispatchIncomingMessagesEv + 479
+	10  JavaScriptCore                      0x00007ff82223065f _ZN3WTF7RunLoop11performWorkEv + 431
+	11  JavaScriptCore                      0x00007ff82223114a _ZN3WTF7RunLoop11performWorkEPv + 26
+	12  CoreFoundation                      0x00007ff8099681ab __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17
+	13  CoreFoundation                      0x00007ff809968113 __CFRunLoopDoSource0 + 180
+	14  CoreFoundation                      0x00007ff809967e8d __CFRunLoopDoSources0 + 242
+	15  CoreFoundation                      0x00007ff8099668a8 __CFRunLoopRun + 892
+	16  CoreFoundation                      0x00007ff809965e6c CFRunLoopRunSpecific + 562
+	17  HIToolbox                           0x00007ff8126145e6 RunCurrentEventLoopInMode + 292
+	18  HIToolbox                           0x00007ff81261434a ReceiveNextEventCommon + 594
+	19  HIToolbox                           0x00007ff8126140e5 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+	20  AppKit                              0x00007ff80c39ffad _DPSNextEvent + 927
+	21  AppKit                              0x00007ff80c39e66a -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1394
+	22  AppKit                              0x00007ff80c390d19 -[NSApplication run] + 586
+	23  fst                                 0x000000010c915576 _ZN60_$LT$$LP$$RP$$u20$as$u20$objc..message..MessageArguments$GT$6invoke17h0d9f3e13efcec517E + 70
+	24  fst                                 0x000000010c91a7ec _ZN4objc7message8platform15send_unverified28_$u7b$$u7b$closure$u7d$$u7d$17h8cf2d28e85abfbf8E + 44
+	25  fst                                 0x000000010c918b1d _ZN14objc_exception3try28_$u7b$$u7b$closure$u7d$$u7d$17hed51ac4cf3f1e9b3E + 45
+	26  fst                                 0x000000010c917505 _ZN14objc_exception10try_no_ret24try_objc_execute_closure17h9d2b157a3076a9caE + 85
+	27  fst                                 0x000000010c926dae RustObjCExceptionTryCatch + 30
+	28  fst                                 0x000000010c916308 _ZN14objc_exception10try_no_ret17h6c776fabb0757403E + 264
+	29  fst                                 0x000000010c918103 _ZN14objc_exception3try17hf53e54f5d8e88183E + 67
+	30  fst                                 0x000000010c91da58 _ZN4objc9exception3try17hcd910beabc25355aE + 40
+	31  fst                                 0x000000010c91905d _ZN4objc7message8platform15send_unverified17hac0afc9826b4aa68E + 125
+	32  fst                                 0x000000010c3f3de1 _ZN3tao13platform_impl8platform10event_loop18EventLoop$LT$T$GT$10run_return17h0df125a29615677bE + 1345
+	33  fst                                 0x000000010c3f4f5d _ZN3tao13platform_impl8platform10event_loop18EventLoop$LT$T$GT$3run17h6b213caacf10a607E + 61
+	34  fst                                 0x000000010c25811c _ZN3tao10event_loop18EventLoop$LT$T$GT$3run17h777add44a8f01744E + 108
+	35  fst                                 0x000000010c2692b3 _ZN83_$LT$tauri_runtime_wry..Wry$LT$T$GT$$u20$as$u20$tauri_runtime..Runtime$LT$T$GT$$GT$3run17h2a8cdcef2707fdfcE + 851
+	36  fst                                 0x000000010c411430 _ZN5tauri3app12App$LT$R$GT$3run17h26e3e5287caa5ca6E + 304
+	37  fst                                 0x000000010c4116de _ZN5tauri3app16Builder$LT$R$GT$3run17he26e2707dda4f52bE + 206
+	38  fst                                 0x000000010c416f6d _ZN3app4main17h084e3b08760365c3E + 8973
+	39  fst                                 0x000000010c2e2fbe _ZN4core3ops8function6FnOnce9call_once17h2112d6e653d4351eE + 14
+	40  fst                                 0x000000010c2350b1 _ZN3std10sys_common9backtrace28__rust_begin_short_backtrace17h1c3ec52e74f14c47E + 17
+	41  fst                                 0x000000010c213194 _ZN3std2rt10lang_start28_$u7b$$u7b$closure$u7d$$u7d$17hb5c7c4bc867648dbE + 20
+	42  fst                                 0x000000010cbfce17 _ZN3std2rt19lang_start_internal17h9effedced03c83e5E + 663
+	43  fst                                 0x000000010c21316e _ZN3std2rt10lang_start17h92e94a875b330435E + 46
+	44  fst                                 0x000000010c417246 main + 22
+	45  dyld                                0x000000010e4fb52e start + 462
+)

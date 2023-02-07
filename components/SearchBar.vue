@@ -4,12 +4,12 @@ interface Props {
   filter: string
 }
 const props = defineProps<Props>()
-const emit = defineEmits(['update:isTyping', 'update:filter'])
+const emit = defineEmits(["update:isTyping", "update:filter"])
 const inputRef = $ref(null)
 const idTimeout = $ref(0)
 const DEBOUNCE_FOR = 300
 function handleInput(event) {
-  emit('update:filter', event.target.value)
+  emit("update:filter", event.target.value)
 }
 onMounted(() => {
   setTimeout(() => {
@@ -17,7 +17,7 @@ onMounted(() => {
   }, 100)
 })
 onUnmounted(() => {
-  emit('update:filter', '')
+  emit("update:filter", "")
 })
 </script>
 

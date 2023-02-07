@@ -3,7 +3,7 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
-    ['unplugin-icons/nuxt', { /* options */ }],
+    'nuxt-icon',
   ],
   ssr: false,
   experimental: {
