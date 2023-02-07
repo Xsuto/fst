@@ -5,15 +5,10 @@ interface Props {
 }
 const props = defineProps<Props>()
 const emit = defineEmits(["update:isTyping", "update:filter"])
-const inputRef = $ref(null)
-const idTimeout = $ref(0)
-const DEBOUNCE_FOR = 300
-function handleInput(event) {
-  emit("update:filter", event.target.value)
-}
+const inputRef = $ref<HTMLInputElement>()
 onMounted(() => {
   setTimeout(() => {
-    inputRef.focus()
+    inputRef?.focus()
   }, 100)
 })
 onUnmounted(() => {

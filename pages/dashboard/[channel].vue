@@ -1,6 +1,6 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const route = useRoute()
-const href = $computed(() => window.location.host.split(':')[0])
+const href = $computed(() => window.location.host.split(":")[0])
 const channel = $computed(() => route.params.channel)
 const link = computed(() => `https://player.twitch.tv/?channel=${channel}&parent=${href}`)
 </script>

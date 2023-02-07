@@ -4,13 +4,16 @@ import { v4 as uuid } from "uuid"
 import type Message from "@/interfaces/Message"
 const MAX_MESSAGE_HISTORY = 500
 interface Props {
-  channel: string
+  channel: Ref<string>
   filter: Ref<string>
-  scroll: { autoscroll: Ref<boolean>; updateScroll: () => void }
+  autoscroll: Ref<boolean>
+  updateScroll: () => void
 }
 
 export default async function (props: Props) {
-  const { channel, scroll: { autoscroll, updateScroll } } = $(props)
+  const { channel, autoscroll } = $(props)
+  const updateScroll = props.updateScroll
+
   const filterDebounced = $(refDebounced(props.filter, 200))
   const client = new tmi.Client({
     connection: {
@@ -28,7 +31,7 @@ export default async function (props: Props) {
       const filterValue = filterDebounced.toLowerCase()
       if (filterValue.startsWith("from:")) {
         const user = filterValue.split(":")[1]
-        return it.tags["display-name"].toLowerCase().startsWith(user)
+        return it.tags["display-name"]?.toLowerCase().startsWith(user)
       }
       return it.raw_message_content.includes(filterValue)
     })
@@ -37,8 +40,9 @@ export default async function (props: Props) {
   const emotes = await getEmotes(channel)
   client.on("message", (_, tags, message) => {
     const data = message.split(" ").map((it) => {
-      if (emotes.has(it))
-        return { content: emotes.get(it), isEmote: true }
+      const emote = emotes.get(it)
+      if (emote)
+        return { content: emote, isEmote: true }
 
       return { content: it, isEmote: false }
     })

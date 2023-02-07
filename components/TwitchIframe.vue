@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { onMounted } from "#imports"
+
 interface Props {
   link: string
 }

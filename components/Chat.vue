@@ -1,12 +1,14 @@
 <script setup lang="ts">
+import type { Ref } from "vue"
 import type { ReactiveVariable } from "vue/macros"
+import { getMessages, onUnmounted, setControls } from "#imports"
 import { Position } from "@/interfaces/ChatPosition"
 interface Props {
-  channel: string
+  channel: Ref<string>
 }
 const props = defineProps<Props>()
 
-const chat: ReactiveVariable<HTMLUListElement> = $ref(null)
+const chat = $ref<HTMLLIElement>()
 const chatPosition = $(useLocalStorage<Position>("chat-position", Position.right))
 const filter = $ref("")
 const isTyping = $ref(false)
@@ -15,13 +17,15 @@ const showSearchBar = $ref(false)
 const autoscroll = $ref(true)
 
 function updateScroll() {
+  if (chat)
+    chat.scrollTop = chat.scrollHeight
   // chat.$el.scrollTop = chat.$el.scrollHeight
-  chat.scrollTop = chat.scrollHeight
 }
 const { messages, client } = $(await getMessages({
   channel: props.channel,
   filter: $$(filter),
-  scroll: { autoscroll: $$(autoscroll), updateScroll },
+  autoscroll: $$(autoscroll),
+  updateScroll,
 }))
 onUnmounted(async () => {
   client.removeAllListeners()

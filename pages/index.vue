@@ -1,21 +1,29 @@
-<script setup lang="ts">
-import { v4 as uuid } from 'uuid'
-const channel = $ref('')
+<script lang="ts" setup>
+import { v4 as uuid } from "uuid"
+
+const channel = $ref("")
+
 interface Channel {
   channel: string
   id: string
 }
-let savedChannels = $ref(useLocalStorage<Channel[]>('channels', []))
+
+let savedChannels = $ref(useLocalStorage<Channel[]>("channels", []))
 const router = useRouter()
+
 function handleSubmit() {
-  if (!channel) {
+  if (!channel)
     return
-  }
+
   if (!savedChannels.some(it => it.channel === channel)) {
-    savedChannels = [{ channel, id: uuid() }, ...savedChannels]
+    savedChannels = [{
+      channel,
+      id: uuid(),
+    }, ...savedChannels]
   }
   router.push({ path: `/dashboard/${channel}` })
 }
+
 function handleDelete(id: string) {
   savedChannels = savedChannels.filter(it => it.id !== id)
 }
@@ -32,7 +40,7 @@ function handleLinkClick(channel: Channel) {
     <div class="content">
       <label for="channel">Channel name</label>
       <form @submit.prevent="handleSubmit">
-        <input v-model="channel" placeholder="Channel name" name="channel" required>
+        <input v-model="channel" name="channel" placeholder="Channel name" required>
         <button type="submit">
           Watch!
         </button>
@@ -46,7 +54,7 @@ function handleLinkClick(channel: Channel) {
                 savedChannel.channel
               }}
             </NuxtLink>
-            <Icon name="ic:outline-delete-forever" class="deleteIcon" @click="handleDelete(savedChannel.id)" />
+            <Icon class="deleteIcon" name="ic:outline-delete-forever" @click="handleDelete(savedChannel.id)" />
           </li>
         </ul>
       </div>
@@ -54,18 +62,21 @@ function handleLinkClick(channel: Channel) {
   </div>
 </template>
 
-<style scoped lang="scss">
-*  {
+<style lang="scss" scoped>
+* {
   color: white;
 }
+
 label {
   font-size: 5rem
 }
+
 main {
   width: 100%;
   display: flex;
   gap: 5%
 }
+
 input {
   width: 60%;
   height: 2rem;
@@ -75,6 +86,7 @@ input {
   border-radius: 1rem;
   font-size: 2rem;
 }
+
 button {
   width: 30%;
   background-color: #374151;
@@ -88,24 +100,29 @@ button {
     background-color: #475569;
   }
 }
+
 .links {
   width: 100%;
   margin: 0;
   padding: 0;
 }
+
 .content {
   display: flex;
   gap: 1rem;
   flex-direction: column;
   margin: 0 auto;
 }
+
 .deleteIcon {
   transition: 200ms;
   cursor: pointer;
+
   &:hover {
     color: #cbd5e1;
   }
 }
+
 .container {
   width: 100%;
   background-color: #1e293b;
@@ -123,17 +140,20 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 li {
   font-size: 2rem;
-  margin:  1rem 0;
+  margin: 1rem 0;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+
 a {
   text-decoration-color: #e2e2e2;
   cursor: pointer;
   transition: 200ms;
+
   &:hover {
     filter: brightness(1.6);
   }
